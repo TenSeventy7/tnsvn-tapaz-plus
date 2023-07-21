@@ -26,7 +26,7 @@
 - Enable core multi-gen LRU (MGLRU) functionality to reduce CPU usage due to memory management
 - Some touch hacks that [somehow still works](https://github.com/Ardjlon/android_device_xiaomi_surya/commit/e47375294471b38037db1a1c3541c82c4ad8a9be)
 
-## [Download 📦](releases)
+## [Download 📦](https://github.com/TenSeventy7/tnsvn-tapaz-plus/releases)
 
 ## Installation 
 - Install the module via Magisk Manager or KernelSU
