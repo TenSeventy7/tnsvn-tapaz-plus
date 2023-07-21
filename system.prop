@@ -1,0 +1,63 @@
+
+# Enable control center blur and locking app to memory for all variants
+ro.config.low_ram.threshold_gb=2
+
+# Schedule UI-critical threads as FIFO
+sys.use_fifo_ui=1
+
+# Use two threads for animator
+persist.sys.miui_animator_sched.sched_threads=2
+
+# Reduce logging
+log.tag.CHIUSECASE=ERROR
+log.tag.ANDR-PERF-RESOURCEQS=D
+log.tag.CVP=S
+log.tag.CamX=S
+log.tag.SYNX-UMD=S
+log.tag.CHIUSECASE=S
+log.tag.ANDR-PERF-RESOURCE=S
+log.tag.ANDR-PERF-RESOURCEQS=S
+log.tag.ANDR-PERF-OPTSHANDLER=S
+log.tag.ANDR-PERF-UTIL=S
+log.tag.ANDR-PERF-MPCTL=S
+log.tag.CpuPowerCalculator=S
+log.tag.ResourcesCompat=S
+log.tag.QC-time-services=S
+log.tag.OMXNodeInstance=S
+log.tag.ziparchive=S
+log.tag.StrictMode=S
+persist.vendor.console.silent.config=1
+persist.vendor.camera.logInfoMask=false
+
+# Pin SystemUI to memory
+persist.sys.pin_file_systemui=true
+
+# Disable debugging logs
+ro.lmk.debug=false
+ro.lmk.log_stats=false
+ro.statsd.enable=false
+persist.debug.sf.statistics=0
+persist.radio.ramdump=0
+
+# Disable Qualcomm IMS debugging logs
+persist.ims.disableDebugLogs=1
+persist.ims.disableADBLogs=1
+persist.ims.disableQXDMLogs=1
+persist.ims.disableIMSLogs=1
+
+# Enable multi-gen LRU (MGLRU)
+persist.device_config.mglru_native.lru_gen_config=core
+
+# Touch Hax
+touch.size.scale=1
+touch.size.bias=0
+touch.size.isSummed=0
+touch.pressure.scale=0.001
+touch.distance.calibration=none
+touch.distance.scale=0
+touch.coverage.calibration=box
+touch.gestureMode=spots
+MultitouchSettleInterval=1ms
+MultitouchMinDistance=1px
+TapInterval=1ms
+TapSlop=1px
