@@ -318,7 +318,7 @@ echo 0 > /sys/devices/system/cpu/cpufreq/policy4/walt/rtg_boost_freq
 
 # colocation V3 settings
 echo 940800 > /sys/devices/system/cpu/cpufreq/policy0/walt/rtg_boost_freq
-echo 51 > /proc/sys/walt/sched_min_task_util_for_boost
+echo 151 > /proc/sys/walt/sched_min_task_util_for_boost # 35%
 echo 1 > /proc/sys/walt/sched_min_task_util_for_uclamp
 echo 1 > /proc/sys/walt/sched_min_task_util_for_colocation
 
