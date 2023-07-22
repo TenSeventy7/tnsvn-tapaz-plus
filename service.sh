@@ -47,6 +47,9 @@ do
 	write "$queue/nr_requests" 64
 done
 
+# Execute child process before parent after fork
+write /proc/sys/kernel/sched_child_runs_first 1
+
 # Mount debugfs to manage scheduler properties
 mount -t debugfs debugfs /sys/kernel/debug
 
