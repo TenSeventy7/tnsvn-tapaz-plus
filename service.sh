@@ -77,5 +77,8 @@ write /sys/kernel/debug/sched/features NEXT_BUDDY
 # Disable Gentle Fair Sleepers
 write /sys/kernel/debug/sched/features NO_GENTLE_FAIR_SLEEPERS
 
+# Do not reduce perceived CPU capacity while idle
+write /sys/kernel/debug/sched/features NO_NONTASK_CAPACITY
+
 # Unmount debugfs after just in case Play Services detects this for Play Integrity
 umount /sys/kernel/debug
