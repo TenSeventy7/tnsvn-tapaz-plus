@@ -1,3 +1,6 @@
+
+![project banner](resources/banner.png)
+
 <h1 align="center">tnsvn-tapaz-plus</h1>
 <p align="center">
   <i>Optimizations and improvements for the Xiaomi Redmi Note 12 4G (tapas/topaz).</i>
