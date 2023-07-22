@@ -74,5 +74,8 @@ write /sys/kernel/debug/sched/nr_migrate 32
 # Consider scheduling tasks that are eager to run
 write /sys/kernel/debug/sched/features NEXT_BUDDY
 
+# Disable Gentle Fair Sleepers
+write /sys/kernel/debug/sched/features NO_GENTLE_FAIR_SLEEPERS
+
 # Unmount debugfs after just in case Play Services detects this for Play Integrity
 umount /sys/kernel/debug
