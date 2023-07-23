@@ -299,7 +299,7 @@
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="200" Target="khaje" Fps="60"
             Resources="0x4303C000, 768000, 0x40800000, 1766, 0x40800100, 1190, 0x40C00000, 2,
-                       0x40C74000, 0xF0, 0x40408000, 0x63, 0x41000000, 2, 0x4281C000, 100" />
+                       0x40C74000, 0xF0, 0x40408000, 0x63, 0x41000000, 2, 0x4281C000, 200" />
 
         <!-- DDR_BW_MIN_FREQ_V2 resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
@@ -314,7 +314,7 @@
             Id="0x00001080" Type="4" Enable="true" Timeout="300" Target="khaje" Fps="90"
             Resources="0x4303C000, 768000, 0x40800000, 2208, 0x40800100, 1516,
                        0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x63, 0x41000000, 3,
-                       0x42804000, 1, 0x4281C000, 150" />
+                       0x42804000, 1, 0x4281C000, 300" />
 
         <!-- DDR_BW_MIN_FREQ_V2 resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
@@ -332,7 +332,7 @@
             Id="0x00001080" Type="4" Enable="true" Timeout="400" Target="khaje" Fps="120"
             Resources="0x4303C000, 768000, 0x40800000, 2400, 0x40800100, 1804,
                        0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x63, 0x41000000, 3,
-                       0x40C78000, 0, 0x40C7C000, 0, 0x42804000, 0, 0x4281C000, 250" />
+                       0x40C78000, 0, 0x40C7C000, 0, 0x42804000, 0, 0x4281C000, 400" />
 
     <!-- Silky Scroll boost -->
         <!-- Type 5 Light Scrolls : Horizontal and Verical -->
