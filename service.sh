@@ -53,18 +53,6 @@ write /proc/sys/kernel/sched_child_runs_first 1
 # Mount debugfs to manage scheduler properties
 mount -t debugfs debugfs /sys/kernel/debug
 
-# Preliminary requirement for the following values
-write /sys/kernel/debug/sched/tunable_scaling 0
-
-# Reduce the maximum scheduling period for lower latency
-write /sys/kernel/debug/sched/latency_ns 5000000
-
-# Schedule this ratio of tasks in the guaranteed sched period
-write /sys/kernel/debug/sched/min_granularity_ns 1000000
-
-# Require preeptive tasks to surpass 1/4 of a sched period in vmruntime
-write /sys/kernel/debug/sched/wakeup_granularity_ns 1250000
-
 # Consider scheduling tasks that are eager to run
 write /sys/kernel/debug/sched/features NEXT_BUDDY
 
