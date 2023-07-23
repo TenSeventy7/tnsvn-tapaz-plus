@@ -65,9 +65,6 @@ write /sys/kernel/debug/sched/min_granularity_ns 1000000
 # Require preeptive tasks to surpass 1/4 of a sched period in vmruntime
 write /sys/kernel/debug/sched/wakeup_granularity_ns 1250000
 
-# Reduce the frequency of task migrations
-write /sys/kernel/debug/sched/migration_cost_ns 1000000
-
 # Consider scheduling tasks that are eager to run
 write /sys/kernel/debug/sched/features NEXT_BUDDY
 
