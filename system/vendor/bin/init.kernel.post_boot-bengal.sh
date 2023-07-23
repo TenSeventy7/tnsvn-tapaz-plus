@@ -247,7 +247,7 @@ echo 39000000 39000000 39000000 39000000 39000000 39000000 39000000 39000000 > /
 
 # CPU busy due to task util on all active CPUs
 echo 255 > /proc/sys/walt/sched_util_busy_hysteresis_enable_cpus
-echo 1 1 87 87 108 108 433 433 > /proc/sys/walt/sched_util_busy_hyst_cpu_util
+echo 1 1 72 144 216 289 361 433 > /proc/sys/walt/sched_util_busy_hyst_cpu_util
 echo 8000000 8000000 8000000 8000000 8000000 8000000 8000000 8000000 > /proc/sys/walt/sched_util_busy_hyst_cpu_ns
 
 # Set up small task packing
