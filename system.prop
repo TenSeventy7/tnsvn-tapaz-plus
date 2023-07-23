@@ -8,16 +8,6 @@ persist.sys.miui_animator_sched.sched_threads=2
 # Force hardware composition for SurfaceFlinger
 debug.sf.hw=1
 
-# Experimental SurfaceFlinger offsets
-debug.sf.early_phase_offset_ns=100000
-debug.sf.early_app_phase_offset_ns=100000
-debug.sf.early_gl_phase_offset_ns=100000
-debug.sf.early_gl_app_phase_offset_ns=100000
-debug.sf.high_fps_early_phase_offset_ns=100000
-debug.sf.high_fps_early_gl_phase_offset_ns=100000
-debug.sf.high_fps_late_app_phase_offset_ns=100000
-debug.sf.high_fps_late_sf_phase_offset_ns=100000
-
 # Reduce logging
 log.tag.CHIUSECASE=ERROR
 log.tag.ANDR-PERF-RESOURCEQS=D
