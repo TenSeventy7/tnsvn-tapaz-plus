@@ -22,7 +22,6 @@
 - Tuned memory writeback ratio and timings
 - Optimized Qualcomm performance hints to remove unnecessary boosts
 - Enable control center blur and locking app to memory for all variants
-- Schedule UI-critical threads as FIFO to reduce jitter
 - Use two threads for MIUI animator
 - Reduce logging by disabling logs to certain unimportant components
 - Pin SystemUI to memory on MIUI
