@@ -211,8 +211,8 @@ fi
 configure_memory_parameters
 
 # Configure RT parameters
-sched_rt_runtime_ms=950
-sched_rt_period_ms=1000
+sched_rt_runtime_ms=1000
+sched_rt_period_ms=1250
 echo "$((${sched_rt_runtime_ms} * 1000))" > /proc/sys/kernel/sched_rt_period_us
 echo "$((${sched_rt_period_ms} * 1000))" > /proc/sys/kernel/sched_rt_runtime_us
 
