@@ -221,8 +221,8 @@ echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
 
 # Core control parameters for gold
 echo 2 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
-echo 60 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
-echo 40 > /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres
+echo 68 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
+echo 42 > /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres
 echo 100 > /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms
 echo 6 > /sys/devices/system/cpu/cpu4/core_ctl/task_thres
 
