@@ -5,6 +5,10 @@ ro.config.low_ram.threshold_gb=2
 # Use two threads for animator
 persist.sys.miui_animator_sched.sched_threads=2
 
+# Force hardware composition for SurfaceFlinger and EGL
+debug.sf.hw=1
+debug.egl.hw=1
+
 # Reduce logging
 log.tag.CHIUSECASE=ERROR
 log.tag.ANDR-PERF-RESOURCEQS=D
