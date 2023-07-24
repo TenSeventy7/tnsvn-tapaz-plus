@@ -325,7 +325,7 @@ echo 2 > /proc/sys/walt/input_boost/sched_boost_on_input # migrate tasks to big 
 echo 250 > /proc/sys/walt/input_boost/input_boost_ms
 
 # configure powerkey boost settings
-echo 1804800 0 0 0 2208000 0 0 0 > /proc/sys/walt/input_boost/powerkey_input_boost_freq
+echo 1900800 0 0 0 2400000 0 0 0 > /proc/sys/walt/input_boost/powerkey_input_boost_freq
 echo 500 > /proc/sys/walt/input_boost/powerkey_input_boost_ms
 
 # configure bus-dcvs
