@@ -297,6 +297,7 @@ echo 500 > /sys/devices/system/cpu/cpufreq/policy0/walt/up_rate_limit_us
 echo 20000 > /sys/devices/system/cpu/cpufreq/policy0/walt/down_rate_limit_us
 echo 1516800 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_freq
 echo 691200 > /sys/devices/system/cpu/cpufreq/policy0/scaling_min_freq
+echo 1 > /sys/devices/system/cpu/cpufreq/policy0/walt/pl
 echo 0 > /sys/devices/system/cpu/cpufreq/policy0/walt/rtg_boost_freq
 
 # configure governor settings for gold cluster
@@ -305,13 +306,8 @@ echo 500 > /sys/devices/system/cpu/cpufreq/policy4/walt/up_rate_limit_us
 echo 10000 > /sys/devices/system/cpu/cpufreq/policy4/walt/down_rate_limit_us
 echo 1766400 > /sys/devices/system/cpu/cpufreq/policy4/walt/hispeed_freq
 echo 1056000 > /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
+echo 1 > /sys/devices/system/cpu/cpufreq/policy4/walt/pl
 echo 0 > /sys/devices/system/cpu/cpufreq/policy4/walt/rtg_boost_freq
-
-# sched_load_boost as -6 is equivalent to target load as 85. It is per cpu tunable.
-echo -6 > /sys/devices/system/cpu/cpufreq/policy0/walt/boost
-echo -6 > /sys/devices/system/cpu/cpufreq/policy4/walt/boost
-echo 85 > /sys/devices/system/cpu/cpufreq/policy0/walt/hispeed_load
-echo 85 > /sys/devices/system/cpu/cpufreq/policy4/walt/hispeed_load
 
 # colcoation v3 disabled
 echo 940800 > /sys/devices/system/cpu/cpufreq/policy0/walt/rtg_boost_freq
