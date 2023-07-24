@@ -224,7 +224,7 @@ echo 2 > /sys/devices/system/cpu/cpu4/core_ctl/min_cpus
 echo 60 > /sys/devices/system/cpu/cpu4/core_ctl/busy_up_thres
 echo 40 > /sys/devices/system/cpu/cpu4/core_ctl/busy_down_thres
 echo 100 > /sys/devices/system/cpu/cpu4/core_ctl/offline_delay_ms
-echo 6 > /sys/devices/system/cpu/cpu4/core_ctl/task_thres
+echo 4 > /sys/devices/system/cpu/cpu4/core_ctl/task_thres
 
 # Set up optimized scheduler parameters for khaje-2 (SDM685)
 echo 55 > /proc/sys/walt/sched_downmigrate
