@@ -284,9 +284,6 @@ echo 20480 > /dev/cpuctl/nnapi-hal/cpu.shares
 echo 20480 > /dev/cpuctl/rt/cpu.shares
 echo 20480 > /dev/cpuctl/top-app/cpu.shares
 
-# Turn off scheduler boost at the end
-echo 0 > /proc/sys/walt/sched_boost
-
 # Reset the RT boost, which is 1024 (max) by default.
 echo 0 > /proc/sys/kernel/sched_util_clamp_min_rt_default
 
@@ -355,6 +352,9 @@ done
 
 echo s2idle > /sys/power/mem_sleep
 echo N > /sys/devices/system/cpu/qcom_lpm/parameters/sleep_disabled
+
+# Turn off scheduler boost at the end
+echo 0 > /proc/sys/walt/sched_boost
 
 # Let kernel know our image version/variant/crm_version
 if [ -f /sys/devices/soc0/select_image ]; then
