@@ -234,8 +234,8 @@ echo 90 > /proc/sys/walt/sched_group_upmigrate
 echo 1 > /proc/sys/walt/sched_walt_rotate_big_tasks
 
 # Set up early migrate tunables for tasks in RTG
-sched_early_downmigrate=40
-sched_early_upmigrate=60
+sched_early_downmigrate=50
+sched_early_upmigrate=65
 echo "$((1024 * 100 / $sched_early_downmigrate))" > /proc/sys/walt/sched_early_downmigrate
 echo "$((1024 * 100 / $sched_early_upmigrate))" > /proc/sys/walt/sched_early_upmigrate
 
