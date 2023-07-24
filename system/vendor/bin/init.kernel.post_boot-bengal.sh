@@ -232,6 +232,7 @@ echo 77 > /proc/sys/walt/sched_upmigrate
 echo 85 > /proc/sys/walt/sched_group_downmigrate
 echo 100 > /proc/sys/walt/sched_group_upmigrate
 echo 1 > /proc/sys/walt/sched_walt_rotate_big_tasks
+echo 10 > /proc/sys/walt/sched_ed_boost
 
 # Set up early migrate tunables for tasks in RTG
 sched_early_downmigrate=54
