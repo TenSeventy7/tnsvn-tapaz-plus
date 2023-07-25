@@ -55,13 +55,18 @@
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_LITTLE resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_LITTLE resource opcode, value -->
 
         <!-- Type="3", FA launch boost of 15sec -->
         <Config
             Id="0x00001081" Type="3" Enable="true" Timeout="15000" Target="khaje"
             Resources="0x40C00000, 3, 0x40C58000, 65, 0x40C54000, 71,
                        0x40408000, 0x5, 0x40C74000, 0xF0,
-                       0x40800000, 2208, 0x40800100, 1804" />
+                       0x40800000, 1766, 0x40800100, 1804,
+                       0x4080C000, 2592000, 0x4080C100, 1900800, 0x40808000, 1766400, 0x40808100, 1804800" />
 
     <!-- config_enableLaunchBoostv4-->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -71,13 +76,18 @@
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_LITTLE resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_LITTLE resource opcode, value -->
 
         <!-- Type="4", AA games only launch boost -->
         <Config
             Id="0x00001081" Type="4" Enable="true" Timeout="15000" Target="khaje"
             Resources="0x40C00000, 3, 0x40C58000, 65, 0x40C54000, 71, 0x40408000, 0x5,
                        0x40C74000, 0xF0,
-                       0x40800000, 2592, 0x40800100, 1804" />
+                       0x40800000, 1766, 0x40800100, 1804,
+                       0x4080C000, 2592000, 0x4080C100, 1900800, 0x40808000, 1766400, 0x40808100, 1804800" />
 
     <!-- config_enableLaunchBoost6-->
        <!-- LPM_BIAS resource opcode, val ms-->
@@ -169,12 +179,15 @@
         <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
 
         <Config
            Id="0x00001081" Type="10" Enable="true" Timeout="2000" Target="khaje"
            Resources="0x40C00000, 2,
                       0x40804000, 0xFFF, 0x40804100, 0xFFF,
-                      0x40800000, 2208, 0x40800100, 0xFFF" />
+                      0x40800000, 2208, 0x40800100, 0xFFF,
+                      0x4080C000, 2592000, 0x40808000, 2208000" />
 
     <!--app resume boost-->
         <!-- SCHEDBOOST resource opcode, value-->
@@ -182,6 +195,8 @@
         <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
         <!-- LPM Bias resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- WALT_RTG_CFS_BOOST_PRIO resource opcode, value -->
@@ -190,6 +205,7 @@
             Resources="0x40C00000, 1,
                        0x40804000, 0xFFF, 0x40804100, 0xFFF,
                        0x40800000, 2592, 0x40800100, 0xFFF,
+                       0x4080C000, 2803200, 0x40808000, 2592000,
                        0x40408000, 0x27, 0x40C74000, 0xF0,
                        0x40CC8000, 119" />
         <Config
@@ -197,6 +213,7 @@
             Resources="0x40C00000, 1,
                        0x40804000, 0xFFF, 0x40804100, 0xFFF,
                        0x40800000, 2592, 0x40800100, 0xFFF,
+                       0x4080C000, 2803200, 0x40808000, 2592000,
                        0x40408000, 0x27, 0x40C74000, 0xF0,
                        0x40CC8000, 119" />
         <Config
@@ -204,6 +221,7 @@
             Resources="0x40C00000, 1,
                        0x40804000, 0xFFF, 0x40804100, 0xFFF,
                        0x40800000, 2592, 0x40800100, 0xFFF,
+                       0x4080C000, 2803200, 0x40808000, 2592000,
                        0x40408000, 0x27, 0x40C74000, 0xF0,
                        0x40CC8000, 119" />
 
@@ -218,6 +236,7 @@
             Id="0x00001083" Enable="true" Timeout="1500" Target="khaje"
             Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF,
                        0x40800000, 2208, 0x40800100, 1804,
+                       0x4080C000, 2592000, 0x40808000, 2208000,
                        0x40C00000, 2,
                        0x40CC8000, 119" />
 
@@ -245,6 +264,10 @@
         <!-- DDR_BW_MIN_FREQ_V2 resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_LITTLE resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_LITTLE resource opcode, value -->
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
@@ -253,7 +276,9 @@
 
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="khaje" Fps="120"
-            Resources="0x4303C000, 768000, 0x40800000, 1766, 0x40800100, 1516,
+            Resources="0x4303C000, 768000,
+                       0x40800000, 1766, 0x40800100, 1516,
+                       0x4080C000, 2400000, 0x4080C100, 1900800, 0x40808000, 1766400, 0x40808100, 1516800,
                        0x40C74000, 0xF0,
                        0x40C78000, 0, 0x40C7C000, 0, 0x42804000, 2, 0x42C20000, 1" />
 
@@ -281,6 +306,10 @@
         <!-- DDR_BW_MIN_FREQ_V2 resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_LITTLE resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_LITTLE resource opcode, value -->
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
@@ -289,7 +318,9 @@
 
         <Config
             Id="0x00001080" Type="2" Enable="true" Target="khaje" Fps="120"
-            Resources="0x4303C000, 768000, 0x40800000, 1766, 0x40800100, 1516,
+            Resources="0x4303C000, 768000,
+                       0x40800000, 1766, 0x40800100, 1516,
+                       0x4080C000, 2400000, 0x4080C100, 1900800, 0x40808000, 1766400, 0x40808100, 1516800,
                        0x41000000, 3,
                        0x40C78000, 0, 0x40C7C000, 0, 0x42804000, 2, 0x42C20000, 1" />
 
@@ -327,6 +358,10 @@
         <!-- DDR_BW_MIN_FREQ_V2 resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_LITTLE resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_LITTLE resource opcode, value -->
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
@@ -339,7 +374,9 @@
 
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="400" Target="khaje" Fps="120"
-            Resources="0x4303C000, 768000, 0x40800000, 2400, 0x40800100, 1804,
+            Resources="0x4303C000, 768000,
+                       0x40800000, 2400, 0x40800100, 1804,
+                       0x4080C000, 2803200, 0x4080C100, 1900800, 0x40808000, 2400000, 0x40808100, 1804800,
                        0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x63, 0x41000000, 3,
                        0x40C78000, 0, 0x40C7C000, 0, 0x42804000, 0, 0x4281C000, 400, 0x42C20000, 1" />
 
@@ -365,6 +402,10 @@
 
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_LITTLE resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_LITTLE resource opcode, value -->
         <!-- SCHED_MIN_TASK_UTIL_FOR_COLOCATION, value-->
         <!-- SCHED_MIN_TASK_UTIL_FOR_BOOST, value-->
         <!-- GPU_MIN_POWER_LEVEL resource opcode,value-->
@@ -372,6 +413,7 @@
         <Config
             Id="0x00001080" Type="5" Enable="true" Fps="120" Target="khaje"
             Resources="0x40800000, 1766, 0x40800100, 1516,
+                       0x4080C000, 2400000, 0x4080C100, 1804800, 0x40808000, 1766400, 0x40808100, 1516800,
                        0x40C78000, 0, 0x40C7C000, 0,
                        0x42804000, 2, 0x42C20000, 1" />
 
@@ -381,6 +423,10 @@
         <!-- Below 4 nodes are for > 90/120 FPS -->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_LITTLE resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_LITTLE resource opcode, value -->
         <!-- SCHED_BOOST resource opcode, value-->
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG resource opcode, value-->
         <!-- BUS_DCVS_DDR_LAT_MINFREQ_GOLD resource opcode, value-->
@@ -400,6 +446,7 @@
         <Config
             Id="0x00001080" Type="6" Enable="true" Fps="90" Target="khaje"
             Resources="0x40800000, 1766, 0x40800100, 1516,
+                       0x4080C000, 2400000, 0x4080C100, 1900800, 0x40808000, 1766400, 0x40808100, 1516800,
                        0x40C00000, 3, 0x43488000, 0xBB800,
                        0x40C78000, 0, 0x40C7C000, 0, 0x4303C000, 768000,
                        0x42804000, 3, 0x42C20000, 1" />
@@ -407,6 +454,7 @@
         <Config
             Id="0x00001080" Type="6" Enable="true" Fps="120" Target="khaje"
             Resources="0x40800000, 2208, 0x40800100, 1804,
+                       0x4080C000, 2592000, 0x4080C100, 1804, 0x40808000, 2208000, 0x40808100, 1804800,
                        0x40C00000, 3, 0x41000000, 3, 0x43488000, 0xBB800,
                        0x40C78000, 0, 0x40C7C000, 0, 0x4303C000, 768000,
                        0x42804000, 2, 0x42C20000, 1" />
@@ -417,6 +465,10 @@
         <!-- Below 4 nodes are for > 90/120 FPS -->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_LITTLE resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_LITTLE resource opcode, value -->
         <!-- SCHED_BOOST resource opcode, value-->
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG resource opcode, value-->
         <!-- BUS_DCVS_DDR_LAT_MINFREQ_GOLD resource opcode, value-->
@@ -439,6 +491,7 @@
         <Config
             Id="0x00001080" Type="7" Enable="true" Fps="90" Target="khaje"
             Resources="0x40800000, 2208, 0x40800100, 1516,
+                       0x4080C000, 2592000, 0x4080C100, 1900800, 0x40808000, 2208000, 0x40808100, 1516800,
                        0x40C00000, 3, 0x41000000, 3, 0x43488000, 0xBB800,
                        0x40C78000, 0, 0x40C7C000, 0, 0x40C74000, 0xF0,
                        0x40408000, 0x27, 0x41008000, 0, 0x4303C000, 768000,
@@ -447,6 +500,7 @@
         <Config
             Id="0x00001080" Type="7" Enable="true" Fps="120" Target="khaje"
             Resources="0x40800000, 2400, 0x40800100, 1804,
+                       0x4080C000, 2803200, 0x4080C100, 1900800, 0x40808000, 2400000, 0x40808100, 1804800,
                        0x40C00000, 3, 0x41000000, 3, 0x43488000, 0xBB800,
                        0x40C78000, 0, 0x40C7C000, 0, 0x40C74000, 0xF0,
                        0x40408000, 0x27, 0x41008000, 0, 0x4303C000, 768000,
@@ -499,6 +553,10 @@
     <!--Rotation animation boost-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
+        <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_LITTLE resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_LITTLE resource opcode, value -->
         <!-- GPU_MIN_POWER_LEVEL resource opcode,value-->
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- Type="", Rotation animation boost -->
@@ -515,6 +573,7 @@
         <Config
             Id="0x00001090" Enable="true" Timeout="1500" Fps="120" Target="khaje"
             Resources="0x40800000, 2208, 0x40800100, 1804,
+                       0x4080C000, 2592000, 0x4080C100, 1900800, 0x40808000, 2208000, 0x40808100, 1804800,
                        0x42804000, 0, 0x40C00000, 3" />
 
     <!--Drag boost-->
@@ -532,25 +591,26 @@
 
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_LITTLE resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
+        <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_LITTLE resource opcode, value -->
         <!-- DDR_BW_MIN_FREQ_V2 resource opcode, value-->
         <!-- GPU_MIN_POWER_LEVEL resource opcode,value-->
          <Config
              Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="khaje" Fps="120"
              Resources="0x40800000, 1766, 0x40800100, 1516,
+                        0x4080C000, 2400000, 0x4080C100, 1804800, 0x40808000, 1766400, 0x40808100, 1516800,
                         0x4303C000, 768000, 0x42804000, 1" />
 
     <!--Display on Resource -->
         <!-- Display on resource opcode, value -->
-        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
-        <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
         <Config
                 Id="0x00001041" Enable="true" Timeout="0" Target="khaje"
                 Resources="0x40000000, 1" />
 
     <!--Display off Resource -->
         <!-- Display on resource opcode, value -->
-        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
-        <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
         <Config
                 Id="0x00001040" Enable="true" Timeout="0" Target="khaje"
                 Resources="0x40000000, 0x0" />
