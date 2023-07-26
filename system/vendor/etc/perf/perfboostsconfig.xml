@@ -33,7 +33,7 @@
        <Config
            Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="khaje"
            Resources="0x40C00000, 1,
-                      0x40C58000, 65, 0x40C54000, 71,
+                      0x40C58000, 50, 0x40C54000, 70,
                       0x40804000, 0xFFF, 0x40804100, 0xFFF,
                       0x40800000, 0xFFF, 0x40800100, 0xFFF,
                       0x40408000, 0x27, 0x40C74000, 0xF0,
@@ -63,7 +63,7 @@
         <!-- Type="3", FA launch boost of 15sec -->
         <Config
             Id="0x00001081" Type="3" Enable="true" Timeout="15000" Target="khaje"
-            Resources="0x40C00000, 3, 0x40C58000, 65, 0x40C54000, 71,
+            Resources="0x40C00000, 3, 0x40C58000, 50, 0x40C54000, 70,
                        0x40408000, 0x5, 0x40C74000, 0xF0,
                        0x40800000, 1766, 0x40800100, 1804,
                        0x4080C000, 2592000, 0x4080C100, 1900800, 0x40808000, 1766400, 0x40808100, 1804800" />
@@ -84,7 +84,7 @@
         <!-- Type="4", AA games only launch boost -->
         <Config
             Id="0x00001081" Type="4" Enable="true" Timeout="15000" Target="khaje"
-            Resources="0x40C00000, 3, 0x40C58000, 65, 0x40C54000, 71, 0x40408000, 0x5,
+            Resources="0x40C00000, 3, 0x40C58000, 50, 0x40C54000, 70, 0x40408000, 0x5,
                        0x40C74000, 0xF0,
                        0x40800000, 1766, 0x40800100, 1804,
                        0x4080C000, 2592000, 0x4080C100, 1900800, 0x40808000, 1766400, 0x40808100, 1804800" />
@@ -105,7 +105,7 @@
           Id="0x00001081" Type="6" Enable="true" Timeout="2000" Target="khaje"
           Resources="0x40408000, 0x63, 0x40C74000, 0xF0,
                      0x40C68000, 60, 0x40C68010, 60, 0x40C68020, 60, 0x40C68030, 60,
-                     0x40C58000, 65, 0x40C54000, 71,
+                     0x40C58000, 50, 0x40C54000, 70,
                      0x41448000, 20000,
                      0x40800000, 0xFFF, 0x40800100, 0xFFF,
                      0x40CC8000, 119"/>
@@ -150,7 +150,7 @@
             Resources="0x40C00000, 1,
                        0x40804000, 0xFFF, 0x40804100, 0xFFF,
                        0x40800000, 0xFFF, 0x40800100, 0xFFF,
-                       0x40C58000, 65, 0x40C54000, 71, 0x40408000, 0x27,
+                       0x40C58000, 50, 0x40C54000, 70, 0x40408000, 0x27,
                        0x40C74000, 0xF0, 0x40CC8000, 119" />
 
     <!--Lightning Game Launch -->
@@ -168,7 +168,7 @@
         <!-- Type="9", main launch of 2sec -->
         <Config
             Id="0x00001081" Type="9" Enable="true" Timeout="2000" Target="khaje"
-            Resources="0x40C00000, 1, 0x40C58000, 65, 0x40C54000, 71, 0x40408000, 0x63,
+            Resources="0x40C00000, 1, 0x40C58000, 50, 0x40C54000, 70, 0x40408000, 0x63,
                        0x40C68000, 60, 0x40C68010, 60, 0x40C68020, 60, 0x40C68030, 60,
                        0x40C74000, 0xF0, 0x40800000, 0xFFF, 0x40800100, 0xFFF,
                        0x41448000, 20000, 0x40CC8000, 119" />
@@ -589,15 +589,17 @@
 
     <!--Display on Resource -->
         <!-- Display on resource opcode, value -->
+        <!-- UCLAMP_BOOST -->
         <Config
                 Id="0x00001041" Enable="true" Timeout="0" Target="khaje"
-                Resources="0x40000000, 1" />
+                Resources="0x40000000, 1, 0x40CAC000, 1" />
 
     <!--Display off Resource -->
         <!-- Display on resource opcode, value -->
+        <!-- UCLAMP_BOOST -->
         <Config
                 Id="0x00001040" Enable="true" Timeout="0" Target="khaje"
-                Resources="0x40000000, 0x0" />
+                Resources="0x40000000, 0x0, 0x40CAC000, 0" />
 
     <!--FPS Update Resource-->
          <!-- PREDECITIVE_LOAD BIG CORE resource opcode, value -->
