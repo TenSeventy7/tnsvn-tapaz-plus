@@ -241,7 +241,8 @@ echo "$((1024 * 100 / $sched_early_downmigrate))" > /proc/sys/walt/sched_early_d
 echo "$((1024 * 100 / $sched_early_upmigrate))" > /proc/sys/walt/sched_early_upmigrate
 
 # CPU busy due to task dequeue and colocation
-echo 112 > /proc/sys/walt/sched_coloc_busy_hysteresis_enable_cpus
+echo 248 > /proc/sys/walt/sched_coloc_busy_hysteresis_enable_cpus
+echo 400000000 > /proc/sys/walt/sched_coloc_downmigrate_ns
 echo 10 10 10 10 10 10 10 10 > /proc/sys/walt/sched_coloc_busy_hyst_cpu_busy_pct
 echo 39000000 39000000 39000000 39000000 39000000 39000000 39000000 39000000 > /proc/sys/walt/sched_coloc_busy_hyst_cpu_ns
 
