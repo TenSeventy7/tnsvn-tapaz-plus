@@ -2,6 +2,9 @@
 # Enable control center blur and locking app to memory for all variants
 ro.config.low_ram.threshold_gb=2
 
+# Schedule UI-critical threads as FIFO
+sys.use_fifo_ui=1
+
 # Use two threads for animator
 persist.sys.miui_animator_sched.sched_threads=2
 
