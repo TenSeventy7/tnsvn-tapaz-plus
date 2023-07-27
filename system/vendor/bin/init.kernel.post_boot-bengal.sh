@@ -322,7 +322,7 @@ echo 250 > /proc/sys/walt/input_boost/input_boost_ms
 
 # configure powerkey boost settings
 echo 1900800 0 0 0 2400000 0 0 0 > /proc/sys/walt/input_boost/powerkey_input_boost_freq
-echo 500 > /proc/sys/walt/input_boost/powerkey_input_boost_ms
+echo 1000 > /proc/sys/walt/input_boost/powerkey_input_boost_ms
 
 # configure bus-dcvs
 bus_dcvs="/sys/devices/system/cpu/bus_dcvs"
