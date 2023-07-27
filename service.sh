@@ -22,6 +22,11 @@ write() {
 # Sleep for 10 seconds after booting
 sleep 10
 
+# Do not force software GLES if kgsl is present
+if [ -e /dev/kgsl-3d0 ]; then
+    setprop persist.sys.force_sw_gles 0
+fi
+
 # Sync to data in the rare case a device crashes
 sync
 
