@@ -5,6 +5,9 @@ ro.config.low_ram.threshold_gb=2
 # Use two threads for animator
 persist.sys.miui_animator_sched.sched_threads=2
 
+# Do not force software GLES if kgsl is present
+persist.sys.force_sw_gles=0
+
 # Enable expensive rendering for gaussian blur used in MIUI
 ro.sf.blurs_are_expensive=1
 vendor.perf.expensive_rendering=1
