@@ -309,7 +309,7 @@ echo 0 > /sys/devices/system/cpu/cpufreq/policy4/walt/rtg_boost_freq
 
 # colcoation v3 disabled
 echo 940800 > /sys/devices/system/cpu/cpufreq/policy0/walt/rtg_boost_freq
-echo 23 > /proc/sys/walt/sched_min_task_util_for_boost
+echo 21 > /proc/sys/walt/sched_min_task_util_for_boost
 echo 0 > /proc/sys/walt/sched_min_task_util_for_uclamp
 echo 0 > /proc/sys/walt/sched_min_task_util_for_colocation
 
