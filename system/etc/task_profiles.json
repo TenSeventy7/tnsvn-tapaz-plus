@@ -617,6 +617,14 @@
           "Params":
           {
             "Controller": "cpuset",
+            "Path": "foreground/boost"
+          }
+        },
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
             "Path": "top-app"
           }
         }
@@ -630,6 +638,14 @@
           "Params":
           {
             "Controller": "cpuset",
+            "Path": "foreground/boost"
+          }
+        },
+        {
+          "Name": "JoinCgroup",
+          "Params":
+          {
+            "Controller": "cpu",
             "Path": "top-app"
           }
         }
