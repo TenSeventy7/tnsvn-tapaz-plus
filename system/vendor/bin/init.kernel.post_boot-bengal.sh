@@ -137,7 +137,7 @@ function configure_memory_parameters() {
     echo 10 > /proc/sys/vm/dirty_background_ratio
 
     # Tune dirty writeback timings
-    echo 1500 > /proc/sys/vm/dirty_expire_centisecs
+    echo 3000 > /proc/sys/vm/dirty_expire_centisecs
     echo 3000 > /proc/sys/vm/dirty_writeback_centisecs
 
     # Disable periodic kcompactd wakeups. We do not use THP, so having many
