@@ -268,8 +268,8 @@ echo 0-7 > /dev/cpuset/top-app/cpus
 echo 0-3 > /dev/cpuset/restricted/cpus
 
 # uclamp parameters
-echo 1 > /dev/cpuctl/camera-daemon/cpu.uclamp.min
-echo 1 > /dev/cpuctl/top-app/cpu.uclamp.min
+echo 20 > /dev/cpuctl/camera-daemon/cpu.uclamp.min
+echo 10 > /dev/cpuctl/top-app/cpu.uclamp.min
 
 # Setup cpu.shares to throttle background groups (bg ~ 5% sysbg ~ 5% dex2oat ~2.5%)
 echo 1024 > /dev/cpuctl/background/cpu.shares

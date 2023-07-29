@@ -592,7 +592,7 @@
         <!-- UCLAMP_BOOST -->
         <Config
                 Id="0x00001041" Enable="true" Timeout="0" Target="khaje"
-                Resources="0x40000000, 1, 0x40CAC000, 1" />
+                Resources="0x40000000, 1, 0x40CAC000, 10" />
 
     <!--Display off Resource -->
         <!-- Display on resource opcode, value -->
