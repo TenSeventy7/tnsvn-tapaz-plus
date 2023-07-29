@@ -11,6 +11,11 @@ persist.sys.miui_animator_sched.sched_threads=2
 # Do not force software GLES if kgsl is present
 persist.sys.force_sw_gles=0
 
+# Disable display rotator scaling
+vendor.display.disable_rotator_downscale=1
+vendor.display.disable_rotator_ubwc=1
+vendor.display.disable_scaler=1
+
 # Enable expensive rendering for gaussian blur used in MIUI
 ro.sf.blurs_are_expensive=1
 vendor.perf.expensive_rendering=1
