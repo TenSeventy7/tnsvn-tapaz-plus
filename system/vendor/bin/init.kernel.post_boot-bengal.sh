@@ -38,19 +38,12 @@ function configure_zram_parameters() {
     MemTotalStr=`cat /proc/meminfo | grep MemTotal`
     MemTotal=${MemTotalStr:16:8}
 
-    # For >2GB Non-Go devices, size = 50% of RAM size.
-    # And enable lz4 zram compression for all targets.
-
+    # Size = 50% of RAM size.
     let RamSizeGB="( $MemTotal / 1048576 ) + 1"
     diskSizeUnit=M
 
-    # Set dynamic zRAM size based on RAM size
-    let zRamSizeMB=2048
-    if [ $RamSizeGB -ge 8 ]; then
-        zRamSizeMB=6144
-    elif [ $RamSizeGB -ge 6 ]; then
-        zRamSizeMB=4096
-    fi
+    # Set dynamic zRAM size based on 50% of RAM size
+    let zRamSizeMB=$((($RamSizeGB * 1024) / 2))
 
     if [ -f /sys/block/zram0/disksize ]; then
         echo "$zRamSizeMB""$diskSizeUnit" > /sys/block/zram0/disksize
