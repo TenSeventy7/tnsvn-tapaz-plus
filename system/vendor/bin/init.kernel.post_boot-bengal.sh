@@ -268,8 +268,6 @@ echo 0-7 > /dev/cpuset/top-app/cpus
 echo 0-3 > /dev/cpuset/restricted/cpus
 
 # uclamp parameters
-echo 1 > /dev/cpuctl/camera-daemon/cpu.uclamp.latency_sensitive
-echo 1 > /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive
 echo 1 > /dev/cpuctl/camera-daemon/cpu.uclamp.min
 echo 1 > /dev/cpuctl/top-app/cpu.uclamp.min
 
