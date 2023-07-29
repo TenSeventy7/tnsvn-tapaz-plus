@@ -236,6 +236,12 @@
                        0x40408000, 0x27, 0x40C74000, 0xF0,
                        0x40CC8000, 119" />
 
+    <!--app launch boost (attach application) -->
+        <!-- SCHED_TASK_BOOST resource opcode, value-->
+        <Config
+            Id="0x00001081" Type="103" Enable="true" Timeout="2000" Target="khaje"
+            Resources="0x40C80000, 0x0" />
+
      <!--Animation boost -->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
