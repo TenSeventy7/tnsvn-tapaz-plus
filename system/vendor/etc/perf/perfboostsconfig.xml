@@ -19,6 +19,7 @@
 
     <!--app lauch boost-->
         <!-- SCHEDBOOST resource opcode, value-->
+        <!-- UCLAMP_BOOST -->
         <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
         <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
@@ -32,7 +33,7 @@
         <!-- Type="1", main launch boost of 2sec -->
        <Config
            Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="khaje"
-           Resources="0x40C00000, 1,
+           Resources="0x40C00000, 1, 0x40CAC000, 50,
                       0x40C58000, 50, 0x40C54000, 70,
                       0x40804000, 0xFFF, 0x40804100, 0xFFF,
                       0x40800000, 0xFFF, 0x40800100, 0xFFF,
@@ -49,6 +50,7 @@
 
     <!-- config_enableLaunchBoostv3-->
         <!-- SCHEDBOOST resource opcode, value-->
+        <!-- UCLAMP_BOOST -->
         <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
         <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
@@ -63,13 +65,14 @@
         <!-- Type="3", FA launch boost of 15sec -->
         <Config
             Id="0x00001081" Type="3" Enable="true" Timeout="15000" Target="khaje"
-            Resources="0x40C00000, 3, 0x40C58000, 50, 0x40C54000, 70,
+            Resources="0x40C00000, 3, 0x40CAC000, 20, 0x40C58000, 50, 0x40C54000, 70,
                        0x40408000, 0x5, 0x40C74000, 0xF0,
                        0x40800000, 1766, 0x40800100, 1804,
                        0x4080C000, 2592000, 0x4080C100, 1900800, 0x40808000, 1766400, 0x40808100, 1804800" />
 
     <!-- config_enableLaunchBoostv4-->
         <!-- SCHEDBOOST resource opcode, value-->
+        <!-- UCLAMP_BOOST -->
         <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
         <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
@@ -84,13 +87,15 @@
         <!-- Type="4", AA games only launch boost -->
         <Config
             Id="0x00001081" Type="4" Enable="true" Timeout="15000" Target="khaje"
-            Resources="0x40C00000, 3, 0x40C58000, 50, 0x40C54000, 70, 0x40408000, 0x5,
+            Resources="0x40C00000, 3, 0x40CAC000, 20, 0x40C58000, 50, 0x40C54000, 70, 0x40408000, 0x5,
                        0x40C74000, 0xF0,
                        0x40800000, 1766, 0x40800100, 1804,
                        0x4080C000, 2592000, 0x4080C100, 1900800, 0x40808000, 1766400, 0x40808100, 1804800" />
 
     <!-- config_enableLaunchBoost6-->
        <!-- LPM_BIAS resource opcode, val ms-->
+       <!-- SCHEDBOOST resource opcode, value-->
+       <!-- UCLAMP_BOOST -->
        <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
        <!-- SLB_BIG, val, SLB_BIG, val, SLB_BIG, val, SLB_BIG, val-->
        <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
@@ -104,6 +109,7 @@
        <Config
           Id="0x00001081" Type="6" Enable="true" Timeout="2000" Target="khaje"
           Resources="0x40408000, 0x63, 0x40C74000, 0xF0,
+                     0x40C00000, 1, 0x40CAC000, 50,
                      0x40C68000, 60, 0x40C68010, 60, 0x40C68020, 60, 0x40C68030, 60,
                      0x40C58000, 50, 0x40C54000, 70,
                      0x41448000, 20000,
@@ -112,6 +118,7 @@
 
     <!--Lightning Launch Base -->
         <!-- SCHEDBOOST resource opcode, value-->
+        <!-- UCLAMP_BOOST -->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
@@ -126,7 +133,7 @@
         <!-- Type="7", main launch of 2sec -->
         <Config
             Id="0x00001081" Type="7" Enable="true" Timeout="2000" Target="khaje"
-            Resources="0x40C00000, 1, 0x40804000, 0xFFFF, 0x40804100, 0xFFFF,
+            Resources="0x40C00000, 1, 0x40CAC000, 50, 0x40804000, 0xFFFF, 0x40804100, 0xFFFF,
                        0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x40400000, 0x1,
                        0x42C10000, 0x1,  0x4303C000, 768000,
                        0x4281C000, 2000, 0x40C80000, 0x0,
@@ -134,6 +141,7 @@
 
     <!--Lightning App Launch-->
         <!-- SCHEDBOOST resource opcode, value-->
+        <!-- UCLAMP_BOOST -->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
@@ -147,7 +155,7 @@
         <!-- Type="8", main launch of 2sec -->
         <Config
             Id="0x00001081" Type="8" Enable="true" Timeout="2000" Target="khaje"
-            Resources="0x40C00000, 1,
+            Resources="0x40C00000, 1, 0x40CAC000, 50,
                        0x40804000, 0xFFF, 0x40804100, 0xFFF,
                        0x40800000, 0xFFF, 0x40800100, 0xFFF,
                        0x40C58000, 50, 0x40C54000, 70, 0x40408000, 0x27,
@@ -155,6 +163,7 @@
 
     <!--Lightning Game Launch -->
         <!-- SCHEDBOOST resource opcode, value-->
+        <!-- UCLAMP_BOOST -->
         <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
         <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
         <!-- LPM_BIAS resource opcode, val ms-->
@@ -168,13 +177,14 @@
         <!-- Type="9", main launch of 2sec -->
         <Config
             Id="0x00001081" Type="9" Enable="true" Timeout="2000" Target="khaje"
-            Resources="0x40C00000, 1, 0x40C58000, 50, 0x40C54000, 70, 0x40408000, 0x63,
+            Resources="0x40C00000, 1, 0x40CAC000, 50, 0x40C58000, 50, 0x40C54000, 70, 0x40408000, 0x63,
                        0x40C68000, 60, 0x40C68010, 60, 0x40C68020, 60, 0x40C68030, 60,
                        0x40C74000, 0xF0, 0x40800000, 0xFFF, 0x40800100, 0xFFF,
                        0x41448000, 20000, 0x40CC8000, 119" />
 
     <!--Activity lauch boost-->
         <!-- SCHEDBOOST resource opcode, value-->
+        <!-- UCLAMP_BOOST -->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
@@ -184,13 +194,14 @@
 
         <Config
            Id="0x00001081" Type="10" Enable="true" Timeout="2000" Target="khaje"
-           Resources="0x40C00000, 2,
+           Resources="0x40C00000, 2, 0x40CAC000, 20,
                       0x40804000, 0xFFF, 0x40804100, 0xFFF,
                       0x40800000, 2208, 0x40800100, 0xFFF,
                       0x4080C000, 2592000, 0x40808000, 2208000" />
 
     <!--app resume boost-->
         <!-- SCHEDBOOST resource opcode, value-->
+        <!-- UCLAMP_BOOST -->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
@@ -202,7 +213,7 @@
         <!-- WALT_RTG_CFS_BOOST_PRIO resource opcode, value -->
         <Config
             Id="0x00001082" Type="1" Enable="true" Timeout="2000" Target="khaje"
-            Resources="0x40C00000, 1,
+            Resources="0x40C00000, 1, 0x40CAC000, 50,
                        0x40804000, 0xFFF, 0x40804100, 0xFFF,
                        0x40800000, 2592, 0x40800100, 0xFFF,
                        0x4080C000, 2803200, 0x40808000, 2592000,
@@ -210,7 +221,7 @@
                        0x40CC8000, 119" />
         <Config
             Id="0x00001082" Type="2" Enable="true" Timeout="2000" Target="khaje"
-            Resources="0x40C00000, 1,
+            Resources="0x40C00000, 1, 0x40CAC000, 50,
                        0x40804000, 0xFFF, 0x40804100, 0xFFF,
                        0x40800000, 2592, 0x40800100, 0xFFF,
                        0x4080C000, 2803200, 0x40808000, 2592000,
@@ -218,7 +229,7 @@
                        0x40CC8000, 119" />
         <Config
             Id="0x000010A1" Type="1" Enable="true" Timeout="2000" Target="khaje"
-            Resources="0x40C00000, 1,
+            Resources="0x40C00000, 1, 0x40CAC000, 50,
                        0x40804000, 0xFFF, 0x40804100, 0xFFF,
                        0x40800000, 2592, 0x40800100, 0xFFF,
                        0x4080C000, 2803200, 0x40808000, 2592000,
@@ -231,25 +242,28 @@
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
         <!-- SCHEDBOOST resource opcode, value-->
+        <!-- UCLAMP_BOOST -->
         <!-- WALT_RTG_CFS_BOOST_PRIO resource opcode, value -->
         <Config
             Id="0x00001083" Enable="true" Timeout="1500" Target="khaje"
             Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF,
                        0x40800000, 2208, 0x40800100, 1804,
                        0x4080C000, 2592000, 0x40808000, 2208000,
-                       0x40C00000, 2,
+                       0x40C00000, 2, 0x40CAC000, 20,
                        0x40CC8000, 119" />
 
     <!--Vertical Scroll boost-->
+        <!-- UCLAMP_BOOST -->
         <!-- DDR_BW_MIN_FREQ_V2 resource opcode, value for khaje -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- PID Affine opcode,value -->
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="khaje" Fps="60"
-            Resources="0x4303C000, 768000, 0x40800100, 1190,
+            Resources="0x40CAC000, 20, 0x4303C000, 768000, 0x40800100, 1190,
                        0x40C74000, 0xF0, 0x42C20000, 1" />
 
+        <!-- UCLAMP_BOOST -->
         <!-- DDR_BW_MIN_FREQ_V2 resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
@@ -258,9 +272,10 @@
 
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="khaje" Fps="90"
-            Resources="0x4303C000, 768000, 0x40800000, 1344, 0x40800100, 1516,
+            Resources="0x40CAC000, 20, 0x4303C000, 768000, 0x40800000, 1344, 0x40800100, 1516,
                        0x42804000, 3, 0x42C20000, 1" />
 
+        <!-- UCLAMP_BOOST -->
         <!-- DDR_BW_MIN_FREQ_V2 resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
@@ -274,22 +289,24 @@
 
         <Config
             Id="0x00001080" Type="1" Enable="true" Target="khaje" Fps="120"
-            Resources="0x4303C000, 768000,
+            Resources="0x40CAC000, 20, 0x4303C000, 768000,
                        0x40800000, 1766, 0x40800100, 1516,
                        0x4080C000, 2400000, 0x4080C100, 1900800, 0x40808000, 1766400, 0x40808100, 1516800,
                        0x40C74000, 0xF0,
                        0x42804000, 2, 0x42C20000, 1" />
 
     <!--Horizontal Scroll boost-->
+        <!-- UCLAMP_BOOST -->
         <!-- DDR_BW_MIN_FREQ_V2 resource opcode, value for khaje -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- PID Affine opcode,value -->
         <Config
             Id="0x00001080" Type="2" Enable="true" Target="khaje" Fps="60"
-            Resources="0x4303C000, 768000, 0x40800100, 1190,
+            Resources="0x40CAC000, 20, 0x4303C000, 768000, 0x40800100, 1190,
                        0x40C74000, 0xF0, 0x42C20000, 1" />
 
+        <!-- UCLAMP_BOOST -->
         <!-- DDR_BW_MIN_FREQ_V2 resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
@@ -298,9 +315,10 @@
 
         <Config
             Id="0x00001080" Type="2" Enable="true" Target="khaje" Fps="90"
-            Resources="0x4303C000, 768000, 0x40800000, 1344, 0x40800100, 1516,
+            Resources="0x40CAC000, 20, 0x4303C000, 768000, 0x40800000, 1344, 0x40800100, 1516,
                        0x42804000, 3, 0x42C20000, 1" />
 
+        <!-- UCLAMP_BOOST -->
         <!-- DDR_BW_MIN_FREQ_V2 resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
@@ -314,13 +332,14 @@
 
         <Config
             Id="0x00001080" Type="2" Enable="true" Target="khaje" Fps="120"
-            Resources="0x4303C000, 768000,
+            Resources="0x40CAC000, 20, 0x4303C000, 768000,
                        0x40800000, 1766, 0x40800100, 1516,
                        0x4080C000, 2400000, 0x4080C100, 1900800, 0x40808000, 1766400, 0x40808100, 1516800,
                        0x41000000, 3,
                        0x42804000, 2, 0x42C20000, 1" />
 
     <!--Pre-Fling boost-->
+        <!-- UCLAMP_BOOST -->
         <!-- DDR_BW_MIN_FREQ_V2 resource opcode, value for khaje -->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
@@ -332,9 +351,10 @@
         <!-- PID Affine opcode,value -->
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="200" Target="khaje" Fps="60"
-            Resources="0x4303C000, 768000, 0x40800000, 1766, 0x40800100, 1190, 0x40C00000, 2,
+            Resources="0x40CAC000, 50, 0x4303C000, 768000, 0x40800000, 1766, 0x40800100, 1190, 0x40C00000, 2,
                        0x40C74000, 0xF0, 0x40408000, 0x63, 0x41000000, 2, 0x4281C000, 200, 0x42C20000, 1" />
 
+        <!-- UCLAMP_BOOST -->
         <!-- DDR_BW_MIN_FREQ_V2 resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
@@ -347,10 +367,11 @@
 
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="300" Target="khaje" Fps="90"
-            Resources="0x4303C000, 768000, 0x40800000, 2208, 0x40800100, 1516,
+            Resources="0x40CAC000, 50, 0x4303C000, 768000, 0x40800000, 2208, 0x40800100, 1516,
                        0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x63, 0x41000000, 3,
                        0x42804000, 1, 0x4281C000, 300, 0x42C20000, 1" />
 
+        <!-- UCLAMP_BOOST -->
         <!-- DDR_BW_MIN_FREQ_V2 resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
@@ -368,7 +389,7 @@
 
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="400" Target="khaje" Fps="120"
-            Resources="0x4303C000, 768000,
+            Resources="0x40CAC000, 50, 0x40CAC000, 50, 0x4303C000, 768000,
                        0x40800000, 2400, 0x40800100, 1804,
                        0x4080C000, 2803200, 0x4080C100, 1900800, 0x40808000, 2400000, 0x40808100, 1804800,
                        0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x63, 0x41000000, 3,
@@ -376,6 +397,7 @@
 
     <!-- Silky Scroll boost -->
         <!-- Type 5 Light Scrolls : Horizontal and Verical -->
+        <!-- UCLAMP_BOOST -->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <!-- GPU_MIN_POWER_LEVEL resource opcode,value-->
@@ -383,14 +405,15 @@
 
         <Config
             Id="0x00001080" Type="5" Enable="true" Target="khaje"
-            Resources="0x40800000, 1056, 0x40800100, 940,
+            Resources="0x40CAC000, 20, 0x40800000, 1056, 0x40800100, 940,
                        0x42C20000, 1" />
 
         <Config
             Id="0x00001080" Type="5" Enable="true" Fps="90" Target="khaje"
-            Resources="0x40800000, 1344, 0x40800100, 1190,
+            Resources="0x40CAC000, 20, 0x40800000, 1344, 0x40800100, 1190,
                                               0x42804000, 3, 0x42C20000, 1" />
 
+        <!-- UCLAMP_BOOST -->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
@@ -401,7 +424,7 @@
         <!-- PID Affine opcode,value -->
         <Config
             Id="0x00001080" Type="5" Enable="true" Fps="120" Target="khaje"
-            Resources="0x40800000, 1766, 0x40800100, 1516,
+            Resources="0x40CAC000, 20, 0x40800000, 1766, 0x40800100, 1516,
                        0x4080C000, 2400000, 0x4080C100, 1804800, 0x40808000, 1766400, 0x40808100, 1516800,
                        0x42804000, 2, 0x42C20000, 1" />
 
@@ -409,6 +432,7 @@
         <!-- Below node is for 60FPS -->
         <!-- MIN_FREQ_CLUSTER_BIG_CORE_0 resource opcode, value-->
         <!-- Below 4 nodes are for > 90/120 FPS -->
+        <!-- UCLAMP_BOOST -->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
@@ -425,13 +449,13 @@
 
         <Config
             Id="0x00001080" Type="6" Enable="true" Target="khaje"
-            Resources="0x40800000, 1344, 0x40C00000, 3,
+            Resources="0x40CAC000, 20, 0x40800000, 1344, 0x40C00000, 3,
                        0x43488000, 0xBB800,
                        0x4303C000, 768000, 0x42C20000, 1" />
 
         <Config
             Id="0x00001080" Type="6" Enable="true" Fps="90" Target="khaje"
-            Resources="0x40800000, 1766, 0x40800100, 1516,
+            Resources="0x40CAC000, 20, 0x40800000, 1766, 0x40800100, 1516,
                        0x4080C000, 2400000, 0x4080C100, 1900800, 0x40808000, 1766400, 0x40808100, 1516800,
                        0x40C00000, 3, 0x43488000, 0xBB800,
                        0x4303C000, 768000,
@@ -439,7 +463,7 @@
 
         <Config
             Id="0x00001080" Type="6" Enable="true" Fps="120" Target="khaje"
-            Resources="0x40800000, 2208, 0x40800100, 1804,
+            Resources="0x40CAC000, 20, 0x40800000, 2208, 0x40800100, 1804,
                        0x4080C000, 2592000, 0x4080C100, 1804, 0x40808000, 2208000, 0x40808100, 1804800,
                        0x40C00000, 3, 0x41000000, 3, 0x43488000, 0xBB800,
                        0x4303C000, 768000,
@@ -449,6 +473,7 @@
         <!-- Below node is for 60FPS -->
         <!-- MIN_FREQ_CLUSTER_BIG_CORE_0 resource opcode, value-->
         <!-- Below 4 nodes are for > 90/120 FPS -->
+        <!-- UCLAMP_BOOST -->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
         <!-- MPCTLV3_WALT_ADAPTIVE_HIGH_FREQ_BIG resource opcode, value -->
@@ -467,14 +492,14 @@
 
         <Config
             Id="0x00001080" Type="7" Enable="true" Target="khaje"
-            Resources="0x40800000, 1190, 0x40C00000, 3,
+            Resources="0x40CAC000, 30, 0x40800000, 1190, 0x40C00000, 3,
                        0x41000000, 3, 0x43488000, 0xBB800,
                        0x40C74000, 0xF0, 0x40408000, 0x27, 0x41008000, 0, 0x4303C000, 768000,
                        0x42804000, 4, 0x42C20000, 1" />
 
         <Config
             Id="0x00001080" Type="7" Enable="true" Fps="90" Target="khaje"
-            Resources="0x40800000, 2208, 0x40800100, 1516,
+            Resources="0x40CAC000, 30, 0x40800000, 2208, 0x40800100, 1516,
                        0x4080C000, 2592000, 0x4080C100, 1900800, 0x40808000, 2208000, 0x40808100, 1516800,
                        0x40C00000, 3, 0x41000000, 3, 0x43488000, 0xBB800,
                        0x40C74000, 0xF0,
@@ -483,7 +508,7 @@
 
         <Config
             Id="0x00001080" Type="7" Enable="true" Fps="120" Target="khaje"
-            Resources="0x40800000, 2400, 0x40800100, 1804,
+            Resources="0x40CAC000, 30, 0x40800000, 2400, 0x40800100, 1804,
                        0x4080C000, 2803200, 0x4080C100, 1900800, 0x40808000, 2400000, 0x40808100, 1804800,
                        0x40C00000, 3, 0x41000000, 3, 0x43488000, 0xBB800,
                        0x40C74000, 0xF0,
@@ -523,6 +548,7 @@
 
     <!--Rotation latency boost-->
         <!-- SCHEDBOOST resource opcode, value-->
+        <!-- UCLAMP_BOOST -->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
@@ -531,7 +557,7 @@
 
         <Config
             Id="0x00001089" Enable="true" Timeout="1500" Target="khaje"
-            Resources="0x40C00000, 3, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
+            Resources="0x40C00000, 3, 0x40CAC000, 50, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
                        0x40800100, 0xFFF" />
 
     <!--Rotation animation boost-->
@@ -543,35 +569,37 @@
         <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_LITTLE resource opcode, value -->
         <!-- GPU_MIN_POWER_LEVEL resource opcode,value-->
         <!-- SCHEDBOOST resource opcode, value-->
+        <!-- UCLAMP_BOOST -->
         <!-- Type="", Rotation animation boost -->
         <Config
             Id="0x00001090" Enable="true" Timeout="1000" Fps="60" Target="khaje"
             Resources="0x40800000, 1766, 0x40800100, 1516,
-                       0x40C00000, 3" />
+                       0x40C00000, 3, 0x40CAC000, 30" />
 
         <Config
             Id="0x00001090" Enable="true" Timeout="1000" Fps="90" Target="khaje"
             Resources="0x40800000, 1766, 0x40800100, 1804,
-                       0x42804000, 0, 0x40C00000, 3" />
+                       0x42804000, 0, 0x40C00000, 3, 0x40CAC000, 30" />
 
         <Config
             Id="0x00001090" Enable="true" Timeout="1500" Fps="120" Target="khaje"
             Resources="0x40800000, 2208, 0x40800100, 1804,
                        0x4080C000, 2592000, 0x4080C100, 1900800, 0x40808000, 2208000, 0x40808100, 1804800,
-                       0x42804000, 0, 0x40C00000, 3" />
+                       0x42804000, 0, 0x40C00000, 3, 0x40CAC000, 30" />
 
     <!--Drag boost-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
+        <!-- UCLAMP_BOOST -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
 
         <!-- Type="1", Drag boost -->
          <Config
              Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="khaje" Fps="60"
-             Resources="0x40800000, 1344, 0x40800100, 1190" />
+             Resources="0x40800000, 1344, 0x40CAC000, 20, 0x40800100, 1190" />
 
          <Config
              Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="khaje" Fps="90"
-             Resources="0x40800000, 1344, 0x40800100, 1190" />
+             Resources="0x40800000, 1344, 0x40CAC000, 20, 0x40800100, 1190" />
 
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value -->
@@ -580,12 +608,13 @@
         <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_BIG resource opcode, value -->
         <!-- MPCTLV3_WALT_ADAPTIVE_LOW_FREQ_LITTLE resource opcode, value -->
         <!-- DDR_BW_MIN_FREQ_V2 resource opcode, value-->
+        <!-- UCLAMP_BOOST -->
         <!-- GPU_MIN_POWER_LEVEL resource opcode,value-->
          <Config
              Id="0x00001087" Type="1" Enable="true" Timeout="0" Target="khaje" Fps="120"
              Resources="0x40800000, 1766, 0x40800100, 1516,
                         0x4080C000, 2400000, 0x4080C100, 1804800, 0x40808000, 1766400, 0x40808100, 1516800,
-                        0x4303C000, 768000, 0x42804000, 1" />
+                        0x4303C000, 768000, 0x40CAC000, 20, 0x42804000, 1" />
 
     <!--Display on Resource -->
         <!-- Display on resource opcode, value -->
