@@ -11,6 +11,10 @@ persist.sys.miui_animator_sched.sched_threads=2
 # Do not force software GLES if kgsl is present
 persist.sys.force_sw_gles=0
 
+# Use SkiaGL for HWUI rendering
+debug.hwui.renderer=skiagl
+debug.renderengine.backend=skiaglthreaded
+
 # Disable display rotator scaling
 vendor.display.disable_rotator_downscale=1
 vendor.display.disable_rotator_ubwc=1
