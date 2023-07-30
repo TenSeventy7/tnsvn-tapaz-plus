@@ -59,8 +59,8 @@ write /sys/kernel/debug/sched/latency_ns 5000000
 # Schedule this ratio of tasks in the guaranteed sched period
 write /sys/kernel/debug/sched/min_granularity_ns 1000000
 
-# Require preeptive tasks to surpass 1/4 of a sched period in vmruntime
-write /sys/kernel/debug/sched/wakeup_granularity_ns 1250000
+# Require preeptive tasks to surpass 1/2 of a sched period in vmruntime
+write /sys/kernel/debug/sched/wakeup_granularity_ns 2500000
 
 # Improve real time latencies by reducing the scheduler migration time
 write /sys/kernel/debug/sched/nr_migrate 16
