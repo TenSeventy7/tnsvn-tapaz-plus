@@ -33,7 +33,7 @@
         <!-- Type="1", main launch boost of 2sec -->
        <Config
            Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="khaje"
-           Resources="0x40C00000, 1, 0x40CAC000, 50,
+           Resources="0x40C00000, 1, 0x40CAC000, 30,
                       0x40C58000, 60, 0x40C54000, 75,
                       0x40804000, 0xFFF, 0x40804100, 0xFFF,
                       0x40800000, 0xFFF, 0x40800100, 0xFFF,
@@ -109,7 +109,7 @@
        <Config
           Id="0x00001081" Type="6" Enable="true" Timeout="2000" Target="khaje"
           Resources="0x40408000, 0x63, 0x40C74000, 0xF0,
-                     0x40C00000, 1, 0x40CAC000, 50,
+                     0x40C00000, 1, 0x40CAC000, 30,
                      0x40C68000, 60, 0x40C68010, 60, 0x40C68020, 60, 0x40C68030, 60,
                      0x40C58000, 60, 0x40C54000, 75,
                      0x41448000, 20000,
@@ -133,7 +133,7 @@
         <!-- Type="7", main launch of 2sec -->
         <Config
             Id="0x00001081" Type="7" Enable="true" Timeout="2000" Target="khaje"
-            Resources="0x40C00000, 1, 0x40CAC000, 50, 0x40804000, 0xFFFF, 0x40804100, 0xFFFF,
+            Resources="0x40C00000, 1, 0x40CAC000, 30, 0x40804000, 0xFFFF, 0x40804100, 0xFFFF,
                        0x40800000, 0xFFF, 0x40800100, 0xFFF, 0x40400000, 0x1,
                        0x42C10000, 0x1,  0x4303C000, 768000,
                        0x4281C000, 2000, 0x40C80000, 0x0,
@@ -155,7 +155,7 @@
         <!-- Type="8", main launch of 2sec -->
         <Config
             Id="0x00001081" Type="8" Enable="true" Timeout="2000" Target="khaje"
-            Resources="0x40C00000, 1, 0x40CAC000, 50,
+            Resources="0x40C00000, 1, 0x40CAC000, 30,
                        0x40804000, 0xFFF, 0x40804100, 0xFFF,
                        0x40800000, 0xFFF, 0x40800100, 0xFFF,
                        0x40C58000, 60, 0x40C54000, 75, 0x40408000, 0x27,
@@ -177,7 +177,7 @@
         <!-- Type="9", main launch of 2sec -->
         <Config
             Id="0x00001081" Type="9" Enable="true" Timeout="2000" Target="khaje"
-            Resources="0x40C00000, 1, 0x40CAC000, 50, 0x40C58000, 60, 0x40C54000, 75, 0x40408000, 0x63,
+            Resources="0x40C00000, 1, 0x40CAC000, 30, 0x40C58000, 60, 0x40C54000, 75, 0x40408000, 0x63,
                        0x40C68000, 60, 0x40C68010, 60, 0x40C68020, 60, 0x40C68030, 60,
                        0x40C74000, 0xF0, 0x40800000, 0xFFF, 0x40800100, 0xFFF,
                        0x41448000, 20000, 0x40CC8000, 119" />
@@ -213,7 +213,7 @@
         <!-- WALT_RTG_CFS_BOOST_PRIO resource opcode, value -->
         <Config
             Id="0x00001082" Type="1" Enable="true" Timeout="2000" Target="khaje"
-            Resources="0x40C00000, 1, 0x40CAC000, 50,
+            Resources="0x40C00000, 1, 0x40CAC000, 30,
                        0x40804000, 0xFFF, 0x40804100, 0xFFF,
                        0x40800000, 2592, 0x40800100, 0xFFF,
                        0x4080C000, 2803200, 0x40808000, 2592000,
@@ -221,7 +221,7 @@
                        0x40CC8000, 119" />
         <Config
             Id="0x00001082" Type="2" Enable="true" Timeout="2000" Target="khaje"
-            Resources="0x40C00000, 1, 0x40CAC000, 50,
+            Resources="0x40C00000, 1, 0x40CAC000, 30,
                        0x40804000, 0xFFF, 0x40804100, 0xFFF,
                        0x40800000, 2592, 0x40800100, 0xFFF,
                        0x4080C000, 2803200, 0x40808000, 2592000,
@@ -229,7 +229,7 @@
                        0x40CC8000, 119" />
         <Config
             Id="0x000010A1" Type="1" Enable="true" Timeout="2000" Target="khaje"
-            Resources="0x40C00000, 1, 0x40CAC000, 50,
+            Resources="0x40C00000, 1, 0x40CAC000, 30,
                        0x40804000, 0xFFF, 0x40804100, 0xFFF,
                        0x40800000, 2592, 0x40800100, 0xFFF,
                        0x4080C000, 2803200, 0x40808000, 2592000,
@@ -351,7 +351,7 @@
         <!-- PID Affine opcode,value -->
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="200" Target="khaje" Fps="60"
-            Resources="0x40CAC000, 50, 0x4303C000, 768000, 0x40800000, 1766, 0x40800100, 1190, 0x40C00000, 2,
+            Resources="0x40CAC000, 30, 0x4303C000, 768000, 0x40800000, 1766, 0x40800100, 1190, 0x40C00000, 2,
                        0x40C74000, 0xF0, 0x40408000, 0x63, 0x41000000, 2, 0x4281C000, 200, 0x42C20000, 1" />
 
         <!-- UCLAMP_BOOST -->
@@ -367,7 +367,7 @@
 
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="300" Target="khaje" Fps="90"
-            Resources="0x40CAC000, 50, 0x4303C000, 768000, 0x40800000, 2208, 0x40800100, 1516,
+            Resources="0x40CAC000, 30, 0x4303C000, 768000, 0x40800000, 2208, 0x40800100, 1516,
                        0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x63, 0x41000000, 3,
                        0x42804000, 1, 0x4281C000, 300, 0x42C20000, 1" />
 
@@ -389,7 +389,7 @@
 
         <Config
             Id="0x00001080" Type="4" Enable="true" Timeout="400" Target="khaje" Fps="120"
-            Resources="0x40CAC000, 50, 0x40CAC000, 50, 0x4303C000, 768000,
+            Resources="0x40CAC000, 30, 0x4303C000, 768000,
                        0x40800000, 2400, 0x40800100, 1804,
                        0x4080C000, 2803200, 0x4080C100, 1900800, 0x40808000, 2400000, 0x40808100, 1804800,
                        0x40C00000, 2, 0x40C74000, 0xF0, 0x40408000, 0x63, 0x41000000, 3,
@@ -492,14 +492,14 @@
 
         <Config
             Id="0x00001080" Type="7" Enable="true" Target="khaje"
-            Resources="0x40CAC000, 30, 0x40800000, 1190, 0x40C00000, 3,
+            Resources="0x40CAC000, 20, 0x40800000, 1190, 0x40C00000, 3,
                        0x41000000, 3, 0x43488000, 0xBB800,
                        0x40C74000, 0xF0, 0x40408000, 0x27, 0x41008000, 0, 0x4303C000, 768000,
                        0x42804000, 4, 0x42C20000, 1" />
 
         <Config
             Id="0x00001080" Type="7" Enable="true" Fps="90" Target="khaje"
-            Resources="0x40CAC000, 30, 0x40800000, 2208, 0x40800100, 1516,
+            Resources="0x40CAC000, 20, 0x40800000, 2208, 0x40800100, 1516,
                        0x4080C000, 2592000, 0x4080C100, 1900800, 0x40808000, 2208000, 0x40808100, 1516800,
                        0x40C00000, 3, 0x41000000, 3, 0x43488000, 0xBB800,
                        0x40C74000, 0xF0,
@@ -508,7 +508,7 @@
 
         <Config
             Id="0x00001080" Type="7" Enable="true" Fps="120" Target="khaje"
-            Resources="0x40CAC000, 30, 0x40800000, 2400, 0x40800100, 1804,
+            Resources="0x40CAC000, 20, 0x40800000, 2400, 0x40800100, 1804,
                        0x4080C000, 2803200, 0x4080C100, 1900800, 0x40808000, 2400000, 0x40808100, 1804800,
                        0x40C00000, 3, 0x41000000, 3, 0x43488000, 0xBB800,
                        0x40C74000, 0xF0,
@@ -557,7 +557,7 @@
 
         <Config
             Id="0x00001089" Enable="true" Timeout="1500" Target="khaje"
-            Resources="0x40C00000, 3, 0x40CAC000, 50, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
+            Resources="0x40C00000, 3, 0x40CAC000, 30, 0x40804000, 0xFFF, 0x40804100, 0xFFF, 0x40800000, 0xFFF,
                        0x40800100, 0xFFF" />
 
     <!--Rotation animation boost-->
@@ -574,18 +574,18 @@
         <Config
             Id="0x00001090" Enable="true" Timeout="1000" Fps="60" Target="khaje"
             Resources="0x40800000, 1766, 0x40800100, 1516,
-                       0x40C00000, 3, 0x40CAC000, 30" />
+                       0x40C00000, 3, 0x40CAC000, 20" />
 
         <Config
             Id="0x00001090" Enable="true" Timeout="1000" Fps="90" Target="khaje"
             Resources="0x40800000, 1766, 0x40800100, 1804,
-                       0x42804000, 0, 0x40C00000, 3, 0x40CAC000, 30" />
+                       0x42804000, 0, 0x40C00000, 3, 0x40CAC000, 20" />
 
         <Config
             Id="0x00001090" Enable="true" Timeout="1500" Fps="120" Target="khaje"
             Resources="0x40800000, 2208, 0x40800100, 1804,
                        0x4080C000, 2592000, 0x4080C100, 1900800, 0x40808000, 2208000, 0x40808100, 1804800,
-                       0x42804000, 0, 0x40C00000, 3, 0x40CAC000, 30" />
+                       0x42804000, 0, 0x40C00000, 3, 0x40CAC000, 20" />
 
     <!--Drag boost-->
         <!-- CPUBOOST_MIN_FREQ BIG CORE resource opcode, value -->
