@@ -259,6 +259,9 @@ echo 0-7 > /dev/cpuset/top-app/cpus
 echo 0-3 > /dev/cpuset/restricted/cpus
 
 # uclamp parameters
+echo 40 > /dev/cpuctl/background/cpu.uclamp.max
+echo 50 > /dev/cpuctl/system-background/cpu.uclamp.max
+echo 80 > /dev/cpuctl/foreground/cpu.uclamp.max
 echo 20 > /dev/cpuctl/camera-daemon/cpu.uclamp.min
 echo 10 > /dev/cpuctl/top-app/cpu.uclamp.min
 
