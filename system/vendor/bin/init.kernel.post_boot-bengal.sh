@@ -263,7 +263,9 @@ echo 40 > /dev/cpuctl/background/cpu.uclamp.max
 echo 50 > /dev/cpuctl/system-background/cpu.uclamp.max
 echo 80 > /dev/cpuctl/foreground/cpu.uclamp.max
 echo 20 > /dev/cpuctl/camera-daemon/cpu.uclamp.min
+echo 1 > /dev/cpuctl/camera-daemon/cpu.uclamp.latency_sensitive
 echo 10 > /dev/cpuctl/top-app/cpu.uclamp.min
+echo 1 > /dev/cpuctl/top-app/cpu.uclamp.latency_sensitive
 
 # Setup cpu.shares to throttle background groups (bg ~ 5% sysbg ~ 5% dex2oat ~2.5%)
 echo 1024 > /dev/cpuctl/background/cpu.shares
