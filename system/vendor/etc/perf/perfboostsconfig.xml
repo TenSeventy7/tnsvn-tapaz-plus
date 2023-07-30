@@ -29,6 +29,7 @@
         <!-- LPM Bias resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- WALT_RTG_CFS_BOOST_PRIO resource opcode, value -->
+        <!-- GPU_MIN_POWER_LEVEL resource opcode,value-->
 
         <!-- Type="1", main launch boost of 2sec -->
        <Config
@@ -38,7 +39,7 @@
                       0x40804000, 0xFFF, 0x40804100, 0xFFF,
                       0x40800000, 0xFFF, 0x40800100, 0xFFF,
                       0x40408000, 0x27, 0x40C74000, 0xF0,
-                      0x40CC8000, 119" />
+                      0x40CC8000, 119, 0x42804000, 0" />
 
     <!--app lauch boost (disabling packing)-->
         <!-- Type="2", launch boost for disable packing 1.5sec -->
@@ -211,6 +212,7 @@
         <!-- LPM Bias resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- WALT_RTG_CFS_BOOST_PRIO resource opcode, value -->
+        <!-- GPU_MIN_POWER_LEVEL resource opcode,value-->
         <Config
             Id="0x00001082" Type="1" Enable="true" Timeout="2000" Target="khaje"
             Resources="0x40C00000, 1, 0x40CAC000, 30,
@@ -218,7 +220,7 @@
                        0x40800000, 2592, 0x40800100, 0xFFF,
                        0x4080C000, 2803200, 0x40808000, 2592000,
                        0x40408000, 0x27, 0x40C74000, 0xF0,
-                       0x40CC8000, 119" />
+                       0x40CC8000, 119, 0x42804000, 0" />
         <Config
             Id="0x00001082" Type="2" Enable="true" Timeout="2000" Target="khaje"
             Resources="0x40C00000, 1, 0x40CAC000, 30,
@@ -226,7 +228,7 @@
                        0x40800000, 2592, 0x40800100, 0xFFF,
                        0x4080C000, 2803200, 0x40808000, 2592000,
                        0x40408000, 0x27, 0x40C74000, 0xF0,
-                       0x40CC8000, 119" />
+                       0x40CC8000, 119, 0x42804000, 0" />
         <Config
             Id="0x000010A1" Type="1" Enable="true" Timeout="2000" Target="khaje"
             Resources="0x40C00000, 1, 0x40CAC000, 30,
@@ -234,7 +236,7 @@
                        0x40800000, 2592, 0x40800100, 0xFFF,
                        0x4080C000, 2803200, 0x40808000, 2592000,
                        0x40408000, 0x27, 0x40C74000, 0xF0,
-                       0x40CC8000, 119" />
+                       0x40CC8000, 119, 0x42804000, 0" />
 
      <!--Animation boost -->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
@@ -244,13 +246,14 @@
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- UCLAMP_BOOST -->
         <!-- WALT_RTG_CFS_BOOST_PRIO resource opcode, value -->
+        <!-- GPU_MIN_POWER_LEVEL resource opcode,value-->
         <Config
             Id="0x00001083" Enable="true" Timeout="1500" Target="khaje"
             Resources="0x40804000, 0xFFF, 0x40804100, 0xFFF,
                        0x40800000, 2208, 0x40800100, 1804,
                        0x4080C000, 2592000, 0x40808000, 2208000,
                        0x40C00000, 2, 0x40CAC000, 20,
-                       0x40CC8000, 119" />
+                       0x40CC8000, 119, 0x42804000, 2" />
 
     <!--Vertical Scroll boost-->
         <!-- UCLAMP_BOOST -->
