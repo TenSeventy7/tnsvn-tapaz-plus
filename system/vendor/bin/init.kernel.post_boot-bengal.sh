@@ -304,7 +304,10 @@ echo 1056000 > /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
 echo 1 > /sys/devices/system/cpu/cpufreq/policy4/walt/pl
 echo 0 > /sys/devices/system/cpu/cpufreq/policy4/walt/rtg_boost_freq
 
-# colcoation v3 disabled
+# Enable conservative pl
+echo 1 > /proc/sys/kernel/sched_conservative_pl
+
+# colocation V3 settings
 echo 940800 > /sys/devices/system/cpu/cpufreq/policy0/walt/rtg_boost_freq
 echo 21 > /proc/sys/walt/sched_min_task_util_for_boost
 echo 0 > /proc/sys/walt/sched_min_task_util_for_uclamp
