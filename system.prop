@@ -64,9 +64,6 @@ persist.ims.disableADBLogs=1
 persist.ims.disableQXDMLogs=1
 persist.ims.disableIMSLogs=1
 
-# Enable multi-gen LRU (MGLRU)
-persist.device_config.mglru_native.lru_gen_config=core
-
 # Touch Hax
 touch.size.scale=1
 touch.size.bias=0
