@@ -47,6 +47,12 @@ do
 	write "$queue/nr_requests" 64
 done
 
+# IRQ Tuning
+# IRQ 137: msm_drm0
+# IRQ 48: kgsl_3d0_irq
+write /proc/irq/137/smp_affinity_list 2
+write /proc/irq/48/smp_affinity_list 1
+
 # Execute child process before parent after fork
 write /proc/sys/kernel/sched_child_runs_first 1
 
