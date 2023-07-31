@@ -206,8 +206,8 @@ configure_memory_parameters
 # Configure RT parameters
 sched_rt_runtime_ms=950
 sched_rt_period_ms=1000
-echo "$((${sched_rt_runtime_ms} * 1000))" > /proc/sys/kernel/sched_rt_period_us
-echo "$((${sched_rt_period_ms} * 1000))" > /proc/sys/kernel/sched_rt_runtime_us
+echo "$((${sched_rt_period_ms} * 1000))" > /proc/sys/kernel/sched_rt_period_us
+echo "$((${sched_rt_runtime_ms} * 1000))" > /proc/sys/kernel/sched_rt_runtime_us
 
 # Disable Core control on silver
 echo 0 > /sys/devices/system/cpu/cpu0/core_ctl/enable
