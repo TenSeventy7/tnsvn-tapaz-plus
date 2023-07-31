@@ -619,17 +619,23 @@
         <!-- Display on resource opcode, value -->
         <!-- UCLAMP_BOOST -->
         <!-- WALT_RTG_CFS_BOOST_PRIO resource opcode, value -->
+        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
         <Config
                 Id="0x00001041" Enable="true" Timeout="0" Target="khaje"
-                Resources="0x40000000, 1, 0x40CAC000, 10, 0x40CC8000, 119" />
+                Resources="0x40000000, 1, 0x40CAC000, 10, 0x40CC8000, 119,
+                           0x40804000, 0xFFF, 0x40804100, 0xFFF" />
 
     <!--Display off Resource -->
         <!-- Display on resource opcode, value -->
         <!-- UCLAMP_BOOST -->
         <!-- WALT_RTG_CFS_BOOST_PRIO resource opcode, value -->
+        <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
+        <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
         <Config
                 Id="0x00001040" Enable="true" Timeout="0" Target="khaje"
-                Resources="0x40000000, 0x0, 0x40CAC000, 0, 0x40CC8000, 99" />
+                Resources="0x40000000, 0x0, 0x40CAC000, 0, 0x40CC8000, 99,
+                           0x40804000, 2400, 0x40804100, 0xFFF" />
 
     <!--FPS Update Resource-->
          <!-- PREDECITIVE_LOAD BIG CORE resource opcode, value -->
