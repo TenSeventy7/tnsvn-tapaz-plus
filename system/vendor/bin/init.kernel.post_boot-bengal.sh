@@ -260,22 +260,12 @@ echo 0-7 > /dev/cpuset/top-app/cpus
 echo 0-3 > /dev/cpuset/restricted/cpus
 
 # uclamp parameters
-echo 40 > /dev/cpuctl/background/cpu.uclamp.max
+echo 50 > /dev/cpuctl/background/cpu.uclamp.max
 echo 50 > /dev/cpuctl/system-background/cpu.uclamp.max
+echo 60 > /dev/cpuctl/dex2oat/cpu.uclamp.max
 echo 80 > /dev/cpuctl/foreground/cpu.uclamp.max
 echo 20 > /dev/cpuctl/camera-daemon/cpu.uclamp.min
 echo 10 > /dev/cpuctl/top-app/cpu.uclamp.min
-
-# Setup cpu.shares to throttle background groups (bg ~ 5% sysbg ~ 5% dex2oat ~2.5%)
-echo 1024 > /dev/cpuctl/background/cpu.shares
-echo 1024 > /dev/cpuctl/system-background/cpu.shares
-echo 512 > /dev/cpuctl/dex2oat/cpu.shares
-echo 20480 > /dev/cpuctl/system/cpu.shares
-echo 20480 > /dev/cpuctl/camera-daemon/cpu.shares
-echo 20480 > /dev/cpuctl/foreground/cpu.shares
-echo 20480 > /dev/cpuctl/nnapi-hal/cpu.shares
-echo 20480 > /dev/cpuctl/rt/cpu.shares
-echo 20480 > /dev/cpuctl/top-app/cpu.shares
 
 # Reset the RT boost, which is 1024 (max) by default.
 echo 0 > /proc/sys/kernel/sched_util_clamp_min_rt_default
