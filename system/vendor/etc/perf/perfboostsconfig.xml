@@ -618,16 +618,18 @@
     <!--Display on Resource -->
         <!-- Display on resource opcode, value -->
         <!-- UCLAMP_BOOST -->
+        <!-- WALT_RTG_CFS_BOOST_PRIO resource opcode, value -->
         <Config
                 Id="0x00001041" Enable="true" Timeout="0" Target="khaje"
-                Resources="0x40000000, 1, 0x40CAC000, 10" />
+                Resources="0x40000000, 1, 0x40CAC000, 10, 0x40CC8000, 119" />
 
     <!--Display off Resource -->
         <!-- Display on resource opcode, value -->
         <!-- UCLAMP_BOOST -->
+        <!-- WALT_RTG_CFS_BOOST_PRIO resource opcode, value -->
         <Config
                 Id="0x00001040" Enable="true" Timeout="0" Target="khaje"
-                Resources="0x40000000, 0x0, 0x40CAC000, 0" />
+                Resources="0x40000000, 0x0, 0x40CAC000, 0, 0x40CC8000, 99" />
 
     <!--FPS Update Resource-->
          <!-- PREDECITIVE_LOAD BIG CORE resource opcode, value -->
