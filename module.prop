@@ -1,7 +1,7 @@
 id=tnsvn-tapaz-plus
 name=Spanish Gem
-version=v23.7.30.7
-versionCode=23073007
+version=v23.7.31.1
+versionCode=23073101
 author=TenSeventy7
 description=Optimizations and improvements for the Xiaomi Redmi Note 12 4G (tapas/topaz).
 updateJson=https://raw.githubusercontent.com/TenSeventy7/tnsvn-tapaz-plus/main/update.json
