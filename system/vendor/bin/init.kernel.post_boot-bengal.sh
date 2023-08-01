@@ -303,7 +303,7 @@ echo 0 > /proc/sys/walt/sched_min_task_util_for_colocation
 
 # configure input boost settings
 echo 1190000 0 0 0 1766400 0 0 0 > /proc/sys/walt/input_boost/input_boost_freq
-echo 2 > /proc/sys/walt/input_boost/sched_boost_on_input # migrate tasks to big on input
+echo 3 > /proc/sys/walt/input_boost/sched_boost_on_input # use boosted util on interaction
 echo 250 > /proc/sys/walt/input_boost/input_boost_ms
 
 # configure powerkey boost settings
