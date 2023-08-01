@@ -53,6 +53,9 @@ done
 write /proc/irq/137/smp_affinity_list 2
 write /proc/irq/48/smp_affinity_list 2
 
+# Equivalent to cmdline 'nosoftlockup'
+write /proc/sys/kernel/soft_watchdog 0
+
 # Execute child process before parent after fork
 write /proc/sys/kernel/sched_child_runs_first 1
 
