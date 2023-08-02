@@ -20,8 +20,6 @@
     <!--app lauch boost-->
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
-        <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
-        <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
@@ -35,7 +33,6 @@
        <Config
            Id="0x00001081" Type="1" Enable="true" Timeout="2000" Target="khaje"
            Resources="0x40C00000, 3, 0x41000000, 4,
-                      0x40C58000, 60, 0x40C54000, 75,
                       0x40804000, 0xFFF, 0x40804100, 0xFFF,
                       0x40800000, 0xFFF, 0x40800100, 0xFFF,
                       0x40408000, 0x27, 0x40C74000, 0xF0,
@@ -51,8 +48,6 @@
 
     <!-- config_enableLaunchBoostv3-->
         <!-- SCHEDBOOST resource opcode, value-->
-        <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
-        <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
@@ -65,15 +60,12 @@
         <!-- Type="3", FA launch boost of 15sec -->
         <Config
             Id="0x00001081" Type="3" Enable="true" Timeout="15000" Target="khaje"
-            Resources="0x40C00000, 3, 0x40C58000, 60, 0x40C54000, 75,
-                       0x40408000, 0x5, 0x40C74000, 0xF0,
+            Resources="0x40C00000, 3, 0x40408000, 0x5, 0x40C74000, 0xF0,
                        0x40800000, 1766, 0x40800100, 1804,
                        0x4080C000, 2592000, 0x4080C100, 1900800, 0x40808000, 1766400, 0x40808100, 1804800" />
 
     <!-- config_enableLaunchBoostv4-->
         <!-- SCHEDBOOST resource opcode, value-->
-        <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
-        <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
@@ -86,7 +78,7 @@
         <!-- Type="4", AA games only launch boost -->
         <Config
             Id="0x00001081" Type="4" Enable="true" Timeout="15000" Target="khaje"
-            Resources="0x40C00000, 3, 0x40C58000, 60, 0x40C54000, 75, 0x40408000, 0x5,
+            Resources="0x40C00000, 3, 0x40408000, 0x5,
                        0x40C74000, 0xF0,
                        0x40800000, 1766, 0x40800100, 1804,
                        0x4080C000, 2592000, 0x4080C100, 1900800, 0x40808000, 1766400, 0x40808100, 1804800" />
@@ -98,8 +90,6 @@
        <!-- UCLAMP_BOOST -->
        <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
        <!-- SLB_BIG, val, SLB_BIG, val, SLB_BIG, val, SLB_BIG, val-->
-       <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
-       <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
        <!-- CPU_DOWN_FREQ_THRESHOLD_US, val us -->
        <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
        <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
@@ -111,7 +101,6 @@
           Resources="0x40408000, 0x63, 0x40C74000, 0xF0,
                      0x40C00000, 3, 0x41000000, 4,
                      0x40C68000, 60, 0x40C68010, 60, 0x40C68020, 60, 0x40C68030, 60,
-                     0x40C58000, 60, 0x40C54000, 75,
                      0x41448000, 20000,
                      0x40800000, 0xFFF, 0x40800100, 0xFFF,
                      0x40CC8000, 119"/>
@@ -146,8 +135,6 @@
         <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MIN_FREQ LITTLE Core resource opcode, value-->
-        <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
-        <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
         <!-- LPM Bias resource opcode, value-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
         <!-- WALT_RTG_CFS_BOOST_PRIO resource opcode, value -->
@@ -158,14 +145,12 @@
             Resources="0x40C00000, 3, 0x41000000, 4,
                        0x40804000, 0xFFF, 0x40804100, 0xFFF,
                        0x40800000, 0xFFF, 0x40800100, 0xFFF,
-                       0x40C58000, 60, 0x40C54000, 75, 0x40408000, 0x27,
+                       0x40408000, 0x27,
                        0x40C74000, 0xF0, 0x40CC8000, 119" />
 
     <!--Lightning Game Launch -->
         <!-- SCHEDBOOST resource opcode, value-->
         <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
-        <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
-        <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
         <!-- LPM_BIAS resource opcode, val ms-->
         <!-- SLB_BIG, val, SLB_BIG, val, SLB_BIG, val, SLB_BIG, val-->
         <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
@@ -177,7 +162,7 @@
         <!-- Type="9", main launch of 2sec -->
         <Config
             Id="0x00001081" Type="9" Enable="true" Timeout="2000" Target="khaje"
-            Resources="0x40C00000, 3, 0x41000000, 4, 0x40C58000, 60, 0x40C54000, 75, 0x40408000, 0x63,
+            Resources="0x40C00000, 3, 0x41000000, 4, 0x40408000, 0x63,
                        0x40C68000, 60, 0x40C68010, 60, 0x40C68020, 60, 0x40C68030, 60,
                        0x40C74000, 0xF0, 0x40800000, 0xFFF, 0x40800100, 0xFFF,
                        0x41448000, 20000, 0x40CC8000, 119" />
@@ -604,10 +589,13 @@
         <!-- WALT_RTG_CFS_BOOST_PRIO resource opcode, value -->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
+        <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
+        <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
         <Config
                 Id="0x00001041" Enable="true" Timeout="0" Target="khaje"
                 Resources="0x40000000, 1, 0x40CAC000, 10, 0x40CC8000, 119,
-                           0x40804000, 0xFFF, 0x40804100, 0xFFF" />
+                           0x40804000, 0xFFF, 0x40804100, 0xFFF,
+                           0x40C58000, 1, 0x40C54000, 25" />
 
     <!--Display off Resource -->
         <!-- Display on resource opcode, value -->
@@ -615,10 +603,13 @@
         <!-- WALT_RTG_CFS_BOOST_PRIO resource opcode, value -->
         <!-- CPUBOOST_MAX_FREQ BIG Core resource opcode, value-->
         <!-- CPUBOOST_MAX_FREQ LITTLE Core resource opcode, value-->
+        <!-- SCHED GROUP DOWNMIGRATE resource opcode, value-->
+        <!-- SCHED GROUP UPMIGRATE resource opcode, value-->
         <Config
                 Id="0x00001040" Enable="true" Timeout="0" Target="khaje"
                 Resources="0x40000000, 0x0, 0x40CAC000, 0, 0x40CC8000, 99,
-                           0x40804000, 2400, 0x40804100, 0xFFF" />
+                           0x40804000, 2400, 0x40804100, 0xFFF,
+                           0x40C58000, 80, 0x40C54000, 100" />
 
     <!--FPS Update Resource-->
          <!-- PREDECITIVE_LOAD BIG CORE resource opcode, value -->
