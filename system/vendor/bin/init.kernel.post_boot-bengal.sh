@@ -292,9 +292,6 @@ echo 1056000 > /sys/devices/system/cpu/cpufreq/policy4/scaling_min_freq
 echo 1 > /sys/devices/system/cpu/cpufreq/policy4/walt/pl
 echo 0 > /sys/devices/system/cpu/cpufreq/policy4/walt/rtg_boost_freq
 
-# Enable conservative pl
-echo 1 > /proc/sys/kernel/sched_conservative_pl
-
 # colocation V3 settings
 echo 940800 > /sys/devices/system/cpu/cpufreq/policy0/walt/rtg_boost_freq
 echo 1344000 > /sys/devices/system/cpu/cpufreq/policy4/walt/rtg_boost_freq
