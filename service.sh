@@ -31,22 +31,6 @@ write /proc/sys/kernel/random/urandom_min_reseed_secs 90
 # Limit max perf event processing time to this much CPU usage
 write /proc/sys/kernel/perf_cpu_time_max_percent 5
 
-# Optimize I/O scheduler values
-for queue in /sys/block/*/queue
-do
-	# Do not use I/O as a source of randomness
-	write "$queue/add_random" 0
-
-	# Disable I/O statistics accounting
-	write "$queue/iostats" 0
-
-	# Reduce heuristic read-ahead in exchange for I/O latency
-	write "$queue/read_ahead_kb" 128
-
-	# Reduce the maximum number of I/O requests in exchange for latency
-	write "$queue/nr_requests" 64
-done
-
 # IRQ Tuning
 # IRQ 137: msm_drm0
 # IRQ 48: kgsl_3d0_irq
@@ -88,3 +72,30 @@ write /sys/kernel/debug/sched/features NO_NONTASK_CAPACITY
 
 # Unmount debugfs after just in case Play Services detects this for Play Integrity
 umount /sys/kernel/debug
+
+# Wait until device has fully booted before applying the values below
+while [ "$(getprop sys.boot_completed)" != "1" ]; do
+    sleep 1
+done
+
+# Sleep for another 20 seconds after fully booting
+sleep 20
+
+# Sync to data in the rare case a device crashes
+sync
+
+# Optimize I/O scheduler values
+for queue in /sys/block/*/queue
+do
+	# Do not use I/O as a source of randomness
+	write "$queue/add_random" 0
+
+	# Disable I/O statistics accounting
+	write "$queue/iostats" 0
+
+	# Reduce heuristic read-ahead in exchange for I/O latency
+	write "$queue/read_ahead_kb" 128
+
+	# Reduce the maximum number of I/O requests in exchange for latency
+	write "$queue/nr_requests" 64
+done
