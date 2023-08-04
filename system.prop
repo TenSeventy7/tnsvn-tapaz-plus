@@ -24,9 +24,6 @@ vendor.perf.expensive_rendering=1
 # Force hardware composition for SurfaceFlinger
 debug.sf.hw=1
 
-# Enable Qualcomm IO prefetching
-vendor.perf.iop_v3.enable=true
-
 # Reduce logging
 log.tag.CHIUSECASE=ERROR
 log.tag.ANDR-PERF-RESOURCEQS=D

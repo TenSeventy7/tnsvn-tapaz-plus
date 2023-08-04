@@ -28,7 +28,7 @@ property Name is called. -->
                 <Prop Name="vendor.prekill_MAX_ADJ_to_Kill" Value="1000"  />
                 <Prop Name="vendor.enable.prefetch" Value="false" />
                 <Prop Name="vendor.iop.enable_prefetch_ofr" Value="0" />
-                <Prop Name="vendor.perf.iop_v3.enable" Value="true" />
+                <Prop Name="vendor.perf.iop_v3.enable" Value="false" />
                 <Prop Name="vendor.perf.iop_v3.enable.debug" Value="false" />
                 <Prop Name="vendor.iop.enable_speed" Value="false" />
                 <Prop Name="vendor.debug.enable.memperfd" Value="true" />
@@ -88,7 +88,6 @@ property Name is called. -->
                 <Prop Name="ro.lmk.psi_scrit_complete_stall_ms" Value="85"  Variant="bengal_32go"/>
 
                 <!--Mention all the khaje specific properties here -->
-                <Prop Name="vendor.perf.iop_v3.enable" Value="true" Target="khaje" />
                 <Prop Name="ro.vendor.perf.enable.prefapps" Value="true" Target="khaje" />
                 <Prop Name="ro.vendor.use_perf_hal_for_preferredapps" Value="true" Target="khaje" />
                 <Prop Name="ro.vendor.perf.count.prefapps" Value="5" Target="khaje" />
