@@ -86,7 +86,6 @@
        <!-- LPM_BIAS resource opcode, val ms-->
        <!-- SCHEDBOOST resource opcode, value-->
        <!-- MIN_ONLINE_CPU_CLUSTER_BIG opcode, value-->
-       <!-- UCLAMP_BOOST -->
        <!-- SCHED_BUSY_HYSTERSIS_CPU_MASK resource opcode, value-->
        <!-- SLB_BIG, val, SLB_BIG, val, SLB_BIG, val, SLB_BIG, val-->
        <!-- CPU_DOWN_FREQ_THRESHOLD_US, val us -->

@@ -270,8 +270,8 @@ echo 50 > /dev/cpuctl/background/cpu.uclamp.max
 echo 50 > /dev/cpuctl/system-background/cpu.uclamp.max
 echo 60 > /dev/cpuctl/dex2oat/cpu.uclamp.max
 echo 80 > /dev/cpuctl/foreground/cpu.uclamp.max
-echo 1 > /dev/cpuctl/camera-daemon/cpu.uclamp.min
-echo 1 > /dev/cpuctl/top-app/cpu.uclamp.min
+echo 10 > /dev/cpuctl/camera-daemon/cpu.uclamp.min
+echo 10 > /dev/cpuctl/top-app/cpu.uclamp.min
 
 # Reset the RT boost, which is 1024 (max) by default.
 echo 0 > /proc/sys/kernel/sched_util_clamp_min_rt_default
