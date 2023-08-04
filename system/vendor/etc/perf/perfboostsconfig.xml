@@ -595,7 +595,7 @@
                 Id="0x00001041" Enable="true" Timeout="0" Target="khaje"
                 Resources="0x40000000, 1, 0x40CAC000, 10, 0x40CC8000, 119,
                            0x40804000, 0xFFF, 0x40804100, 0xFFF,
-                           0x40C58000, 1, 0x40C54000, 25" />
+                           0x40C58000, 10, 0x40C54000, 10" />
 
     <!--Display off Resource -->
         <!-- Display on resource opcode, value -->

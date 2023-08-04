@@ -230,13 +230,13 @@ echo 4 > /sys/devices/system/cpu/cpu4/core_ctl/task_thres
 echo 60 > /proc/sys/walt/sched_downmigrate
 echo 80 > /proc/sys/walt/sched_upmigrate
 echo 10 > /proc/sys/walt/sched_group_downmigrate
-echo 50 > /proc/sys/walt/sched_group_upmigrate
+echo 10 > /proc/sys/walt/sched_group_upmigrate
 echo 0 > /proc/sys/walt/sched_walt_rotate_big_tasks
 echo 5 > /proc/sys/walt/sched_ed_boost
 
 # Set up early migrate tunables for tasks in RTG
-sched_early_downmigrate=40
-sched_early_upmigrate=60
+sched_early_downmigrate=10
+sched_early_upmigrate=10
 echo "$((1024 * 100 / $sched_early_downmigrate))" > /proc/sys/walt/sched_early_downmigrate
 echo "$((1024 * 100 / $sched_early_upmigrate))" > /proc/sys/walt/sched_early_upmigrate
 
