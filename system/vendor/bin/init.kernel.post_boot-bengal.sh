@@ -127,7 +127,7 @@ function configure_memory_parameters() {
 
     # Tune dirty (background) memory ratio for writeback
     echo 30 > /proc/sys/vm/dirty_ratio
-    echo 10 > /proc/sys/vm/dirty_background_ratio
+    echo 15 > /proc/sys/vm/dirty_background_ratio
 
     # Tune dirty writeback timings
     echo 3000 > /proc/sys/vm/dirty_expire_centisecs
