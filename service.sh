@@ -29,7 +29,7 @@ sync
 write /proc/sys/kernel/random/urandom_min_reseed_secs 90
 
 # Limit max perf event processing time to this much CPU usage
-write /proc/sys/kernel/perf_cpu_time_max_percent 5
+write /proc/sys/kernel/perf_cpu_time_max_percent 2
 
 # IRQ Tuning
 # IRQ 137: msm_drm0
