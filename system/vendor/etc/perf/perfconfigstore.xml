@@ -134,6 +134,8 @@ property Name is called. -->
                 <Prop Name="ro.vendor.qti.sys.fw.bservice_age"   Value="5000"  Target="khaje" Ram="3" />
                 <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"  Value="32"    Target="khaje" Ram="3" />
                 <Prop Name="ro.vendor.qti.sys.fw.bg_apps_limit"  Value="32"    Target="khaje" Ram="4" />
+                <Prop Name="vendor.appcompact.full_compact_type" Value="2"     Target="khaje" Ram="6" />
+                <Prop Name="vendor.appcompact.some_compact_type" Value="2"     Target="khaje" Ram="6" />
 
     </PerfConfigs>
 </PerfConfigsStore>
