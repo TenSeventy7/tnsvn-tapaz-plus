@@ -250,7 +250,7 @@ echo 39000000 39000000 39000000 39000000 39000000 39000000 39000000 39000000 > /
 echo 0 > /proc/sys/walt/sched_util_busy_hysteresis_enable_cpus
 
 # Set up small task packing
-echo 38 > /proc/sys/walt/sched_cluster_util_thres_pct
+echo 31 > /proc/sys/walt/sched_cluster_util_thres_pct
 echo 22 > /proc/sys/walt/sched_idle_enough
 
 # set the threshold for low latency task boost feature which prioritize binder activity tasks
