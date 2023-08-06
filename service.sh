@@ -61,6 +61,9 @@ write /sys/kernel/debug/sched/tunable_scaling 0
 # Improve real time latencies by reducing the scheduler migration time
 write /sys/kernel/debug/sched/nr_migrate 32
 
+# Reduce the frequency of task migrations
+write /sys/kernel/debug/sched/migration_cost_ns 1000000
+
 # Consider scheduling tasks that are eager to run
 write /sys/kernel/debug/sched/features NEXT_BUDDY
 
