@@ -254,7 +254,8 @@ echo 31 > /proc/sys/walt/sched_cluster_util_thres_pct
 echo 22 > /proc/sys/walt/sched_idle_enough
 
 # set the threshold for low latency task boost feature which prioritize binder activity tasks
-echo 325 > /proc/sys/walt/walt_low_latency_task_threshold
+echo 100 > /proc/sys/walt/walt_low_latency_task_threshold
+echo 119 > /proc/sys/walt/walt_rtg_cfs_boost_prio
 
 # cpuset parameters
 echo 2-3 > /dev/cpuset/audio-app/cpus
